@@ -41,12 +41,24 @@
         
     </div>
     
-    <div id="error-msg">
+    <div class="d-none" id="error-msg">
         You have to be of legal drinking age to access this website.
     </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/age.js"></script>
+    <script>
+        function getParameter(parameterName){
+            let parameters = new URLSearchParams(window.location.search);
+            return parameters.get(parameterName)
+        }
+        // console.log(getParameter("legal-drinking-age"));
+        if(getParameter("legal-drinking-age") == 1){
+            window.location.href = "home.html"
+        } else if (getParameter("legal-drinking-age") == 0) {
+            $("#error-msg").removeClass("d-none")
+        }
+    </script>
 </body>
 
 </html>
