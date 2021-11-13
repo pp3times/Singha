@@ -1,7 +1,259 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+/* Fonts */
+@font-face {
+    font-family: "korolev";
+    src: url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "korolev";
+    src: url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "korolev";
+    src: url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 300;
+}
+
 :root {
     --yellow: #ffc107;
     --white: #ffffff;
     --gray: #eaeae9;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    background-image: url('/assets/legal/bg-age.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    font-family: "korolev", sans-serif;
+}
+
+a {
+    color: var(--white);
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: var(--yellow);
+    transition: all 0.5s ease-in-out;
+}
+
+
+#logo {
+    position: fixed;
+    right: 40px;
+    top: 0;
+    height: 18.7%;
+    -webkit-animation: fade-in 1.4s ease-in-out forwards;
+    animation: fade-in 1.4s ease-in-out forwards;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.first {
+    margin-top: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    -webkit-animation: fade-in-up-2 0.7s ease-in-out forwards;
+    animation: fade-in-up-2 0.7s ease-in-out forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.first>h1,
+.first>span {
+    font-size: 38px;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.age-set {
+    animation: fade-in-up-2 0.7s ease-in-out forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.btn-age {
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    padding: 0rem 4.5rem;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+    margin: 15px 7px;
+}
+
+.btn-age:hover {
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+.policy {
+    color: var(--white);
+    -webkit-animation: fade-in-up-2 0.7s ease-in-out forwards;
+    animation: fade-in-up-2 0.7s ease-in-out forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    -webkit-animation: fade-in-up-2 0.7s ease-in-out forwards;
+    animation: fade-in-up-2 0.7s ease-in-out forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.social>a {
+    margin: 0 15px;
+}
+
+#kids {
+    font-size: 13px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    padding: 14px 20px;
+    border-radius: 5px;
+    background: #e02323;
+    -webkit-box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: fade-in-up 0.7s forwards;
+    animation: fade-in-up 0.7s forwards;
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+
+@-webkit-keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-up {
+    from {
+        opacity: 0;
+        -webkit-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        -webkit-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+}
+
+@-webkit-keyframes fade-in-up-2 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate(0%, 50%);
+        transform: translate(0%, 50%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fade-in-up-2 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate(0%, 50%);
+        transform: translate(0%, 50%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+@-webkit-keyframes fade-in-up-3 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate(0%, 50%);
+        transform: translate(0%, 50%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fade-in-up-3 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate(0%, 50%);
+        transform: translate(0%, 50%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
