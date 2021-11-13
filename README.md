@@ -2,7 +2,7 @@
 
 <P>Checklish Singha</P>
 
-- [ ] Check Legal ([Jrm])
+- [x] Check Legal ([Jrm])
 - [ ] Index ([Jrm])
 	- [ ] Event ([Pleng]) **
 	- [ ] SINGHA MUSIC ([Jean])
