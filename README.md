@@ -1,9 +1,15 @@
-#Singha
+# Singha
 
-<P>Checklish Singha</P>
+### Singha Site For Web-Technology
+- Bootstrap5
+- aos.js
+
+---
+
+### Checklist Singha
 
 - [x] Check Legal ([Jrm])
-- [ ] Index ([Jrm])
+- [ ] Index ([Fang])
 	- [ ] Event ([Pleng]) **
 	- [ ] SINGHA MUSIC ([Jean])
 	- [ ] SINGHA FOOD ([Jean])
