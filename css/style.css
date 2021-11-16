@@ -266,6 +266,69 @@ body {
     background-color: var(--gray);
     padding: 4rem 25rem; 
 }
+.singha-index {
+    padding: 0rem 17rem; 
+    position: relative; 
+    overflow: hidden;
+    background-color: #ffffff;
+    z-index: 1;
+}
+.singha-index-bg-yellow {
+    background-color: var(--yellow); 
+    height: 95rem; 
+    width: 3000px; 
+    position: absolute; 
+    top: 13rem; 
+    left: -15rem; 
+    z-index: 0; 
+    transform: rotate(-15deg);
+}
+.singha-index-bg-low-yellow {
+    background-color: var(--yellow); 
+    height: 50rem; 
+    width: 3000px; 
+    position: absolute; 
+    bottom: -0rem; 
+    left: 35rem; 
+    z-index: 0; 
+    transform: rotate(-15deg);
+}
+.singha-index-bg-low-white {
+    background-color: var(--white); 
+    height: 5rem; 
+    width: 3000px; 
+    position: absolute; 
+    bottom: -0rem; 
+    left: 0; 
+    z-index: 0; 
+}
+.index-img {
+    position: relative;
+    /* max-width: 470px; */
+    overflow: hidden;
+    display: block;
+}
+.index-img > img {
+    width: 100%;
+    transition: 250ms;
+}
+.index-img > img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.index-img:hover > img:nth-child(1) {
+    transform: scale(1.1);
+}
+.back-to-top {
+    position: relative;
+    z-index: 5;
+    transition: 140ms;
+    cursor: pointer;
+}
+.back-to-top:hover {
+    transform: translateY(-.5rem);
+}
 
 @media (max-width:1366px) {
     .recommended-section {
@@ -289,5 +352,8 @@ body {
     .singha-experience-bg-yellow {
         top: -16rem; 
         left: -25rem; 
+    }
+    .singha-index {
+        padding: 0rem 0rem; 
     }
 }
