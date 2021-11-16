@@ -36,9 +36,27 @@
                     </div>
                 </a>
                 <div class="py-5" style="padding: 8rem; text-align: start;">
-                    <h1 class="fs-3 mb-4 text-center">SINGHA COOKING AT HOME 2020</h1>
-                    <img src="/assets/01 cover.jpg" class="w-100 mb-4">
-                    <p>But who wants to wait in line for a table at a restaurant, or be stuck in traffic jam on the way there? Instead, why not do something special this weekend? Gather your friends and family over to make a simple yet delicious menu like our ‘BBQ Pork Ribs”, perfect for a special night in. Don’t hesitate enrolling some extra hands: cooking together is a fun experience to share.</p>
+                    <h1 class="fs-4 mb-4 text-center">HOW TO BUILD A DREAM TEAM</h1>
+                    <p>During a project, a quality end product comes not just from hard work, but from teamwork and unity. The term ‘dream team’ - a more effective form of ​team work​ - is not easy to achieve. All members of the team must be willing to change themselves, in doing so, will improve leadership skills. Here are six ways to form effective working relationships between your team members. These will in turn result in a more efficient and successful project outcome.</p>
+                    <h1 class="fs-4 mb-4 text-center">We Are Human After All</h1>
+                    <p>Disagreements are common in team projects. To help prevent this, team members should keep in mind that forgiveness is key to ensuring a project is completed smoothly. </p>
+                    <p>According to a study by the University of Bremen, people from countries with strong ideologies on the importance of forgiveness are better equipped to tackle psychological challenges and effectively find solutions to problems that arise. Moreover, researchers argue that forgiveness can prevent arguments and quarrels effectively.</p>
+                    <h1 class="fs-4 mb-4 text-center">Be Open-minded</h1>
+                    <p>The second key factor to increasing team efficiency is open minded thinking. ‘Trust Self and Others’ is a theory that explains the concept of open-minded thinking. It includes being receptive to new ideas, eliminating bias, making decisions by examining all factors logically and being able to compromise on decisions. </p>
+                    <h1 class="fs-4 mb-4 text-center">Prioritize The Details</h1>
+                    <p>There isn’t a more efficient tool to prioritize work and increase productivity than the ‘Eisenhower Box’, a strategy to make time management more efficient. The method utilizes simple prioritization techniques based on four levels of importance: 
+                        <br>-  If the task is urgent, it should be done immediately. 
+                        <br>-  If the task is important but not urgent, it should be scheduled for after you complete more important tasks. 
+                        <br>-  If the task is urgent but not important, it should be delegated to someone else. 
+                        <br>-  If the task is neither important nor urgent, it is the last thing that should be completed. 
+                        <br>By separating tasks into these 4 levels of importance, your team will be able to manage work with far better efficiency and will help form your dream team. </p>
+                    <h1 class="fs-4 mb-4 text-center">Unique And Complementary Skill Sets</h1>
+                    <p>To create a perfect dream team, you should assemble team members who are equipped with different specialist skills. Unlike working individually, challenges are able to be tackled by utilizing each member’s strengths to overcome challenges. Humans are social beings and tend to mingle with others that possess different interests, skills and characteristics and those differences need to be balanced to create perfect harmony in the team.</p>
+                    <p>Have you wondered why you like or dislike a person without knowing anything about them? This was explained by Abraham Harold Maslow’s hierarchy of needs to showcase the mechanism of a human’s mind. The psychologist argued that humans tend to instinctively mingle with others who share similar interest. If these are taken into consideration, it will encourage team members to complete tasks with efficiency. </p>
+                    <h1 class="fs-4 mb-4 text-center">There Is No “I” In Teamwork</h1>
+                    <p>Strong teamwork while being selfless is the essential key to success. Acting ‘selflessly’ doesn’t mean putting yourself into difficult situations but rather trying to understand others and empathize with them. This powerful action will boost the potential for efficient teamwork. What should be avoided while working on teamwork skills is focusing on one particular person’s interest.</p>
+                    <h1 class="fs-4 mb-4 text-center">Teammate Bonding</h1>
+                    <p>Despite outside circumstances or an otherwise bad day, making time to spend time with your teammates after work is essential for building strong relationships. Conversation, celebration and being open are the most essential components to strong teamwork. Time spent together will increase trust among your team and lead to an efficient work environment.</p>
                 </div>
             </div>
         </div>
@@ -128,19 +146,19 @@
                 console.log(rand, alrady);
 
                 var html = `
-                        <div class="experience-card">
-                            <a href="`+card[index][4]+`" class="experience-card-img">
-                                <img src="/assets/card-`+card[index][0]+`.jpg" alt="">
-                            </a>
-                            <div class="experience-card-header">
-                                <h1>`+card[index][2]+`</h1>
-                            </div>
-                            <div class="experience-card-body">
-                                <h1>`+card[index][1]+`</h1>
-                                <p>`+card[index][3]+`</p>
-                                <a href="`+card[index][4]+`" class="btn btn-outline-secondary btn-sm px-4 rounded-1">- MORE DETAIL -</a>
-                            </div>
-                        </div>`;
+                <div class="experience-card">
+                    <a href="`+card[rand][4]+`" class="experience-card-img">
+                        <img src="/assets/card-`+card[rand][0]+`.jpg" alt="">
+                    </a>
+                    <div class="experience-card-header">
+                        <h1>`+card[rand][2]+`</h1>
+                    </div>
+                    <div class="experience-card-body">
+                        <h1>`+card[rand][1]+`</h1>
+                        <p>`+card[rand][3]+`</p>
+                        <a href="`+card[rand][4]+`" class="btn btn-outline-secondary btn-sm px-4 rounded-1">- MORE DETAIL -</a>
+                    </div>
+                </div>`;
                 document.getElementsByClassName('experience-card-group')[0].innerHTML += html;
             }
         };

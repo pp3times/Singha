@@ -26,29 +26,38 @@
     <div class="content">
         <div class="singha-experience">
             <div class="singha-experience-bg-yellow"></div>
-            <div style="z-index: 1; position: relative; text-align: center;">
+            <div style="z-index: 1; position: relative; text-align: center; min-height: 100vh;">
                 <h1 class="fw-bold mb-4 text-start">SINGHA<br>EXPERIENCE</h1>
                 <hr style="width: 8rem; border-bottom: 3px solid #000000; opacity: 1;">
-                <img src="/assets/singha-x.jpg" alt="" class="my-4">
-                <h1 class="fs-5 fw-bold"><a style="color: var(--yellow);">SINGHA</a> MUSIC</h1>
-                <p>24 HOURS BEFORE SHOWTIME WITH BURIN BOONVISUT</p>
-                <p>Read through our interview with Thai singer and celebrity Burin Boonvisut as he shares how he<br>prepares for a big show and lets us in on the details of celebrity life.</p>
-                <a class="btn btn-outline-secondary btn-sm px-4 mb-4 rounded-1">- MORE DETAIL -</a>
-                <hr style="width: 18rem; border-bottom: 1px solid var(--gray); opacity: 1;" class="mx-auto">
-                <h1 class="fs-4 fw-bold mt-5">LATEST<br><a style="color: var(--yellow);">EXPERIENCE</a></h1>
-                <p><b>TYPES</b></p>
-                <button class="btn-experience btn-experience-active" id="all" onclick="order('all')">ALL</button>
-                <button class="btn-experience" id="food" onclick="order('SINGHA FOOD')">FOOD</button>
-                <button class="btn-experience" id="music" onclick="order('SINGHA MUSIC')">MUSIC</button>
-                <button class="btn-experience" id="travel" onclick="order('SINGHA TRAVEL')">TRAVEL</button>
-                <button class="btn-experience" id="entrepreneur" onclick="order('SINGHA ENTREPRENEUR')">ENTREPRENEUR</button>
-                <div class="experience-card-group">
+                <a href="/singha-experience.html" class="back-arrow">
+                    <div>
+                        <img src="/assets/icon-arrow-back.png" alt="">
+                        BACK
+                    </div>
+                </a>
+                <div class="py-5" style="padding: 8rem; text-align: start;">
+                    <h1 class="fs-4 mb-4 text-center">ALONG THE CHAO PHRAYA RIVER</h1>
+                    <p>Forming the main artery of Thailand, Chao Phraya River is more than just a gigantic water resource. The river is alive with traditional cultures, teeming with shops, accommodations and important landmarks that make Thailand one of the world’s most stunning travel destinations (according to a ranking conducted by Mastercard). Strolling along the riverbank or exploring the river by boat, you will discover both remnants of the nostalgic beauty of old Bangkok and diverse contemporary and cutting-edge hotspots. Here are some of the coolest restaurants and bars along the Chao Phraya River that promise to deliver an impressive one-day visitor experience:</p>
+                    <h1 class="fs-4 mb-4 text-center">Take a Stroll and admire the stunning architecture of Tha Tien shophouses</h1>
+                    <p>Start off in the late morning by admiring the eye-popping shophouses with contrasting bright yellow and green hues — the distinctive color combination that’s a familiar sight to locals and visitors. The centuries-old, colonial-style residential buildings appear along the road in Thai Tien and are known for their classic beauty. The area mixes traditional temples with trendy cafés, eateries and art galleries, making navigation through small alleys the best way to appreciate the bygone charm of the Old Rattanakosin era. Tha Tien is full of old-fashioned shophouses, making the area highly photogenic. Professional photographs and sketches produced by noted local artists are available at many of the art galleries in the neighborhood.</p>
+                    <h1 class="fs-4 mb-4 text-center">Lunch at Supanniga Eating Room by Khunyai at Tha Tien</h1>
+                    <p>Following architecture appreciation at Tha Tien, it’s time to indulge in some appetizing Thai cuisine at Suppanniga Eating Room by Khunyai, one of the most celebrated contemporary Thai restaurants. The restaurant’s decor combines old-school charm with contemporary edginess and offers stunning views of Chao Phraya River. From the kitchen, expect an array of rarely-found traditional bites that are best paired with a pint of chilled Singha beer.</p>
+                    <h1 class="fs-4 mb-4 text-center">Witness part of history at Ban Kao Lao Leung at Ratchawong Pier</h1>
+                    <p>Board the Chao Phraya cruise boat to Ratchawong Pier — the neighborhood that’s known as the early settlement of Chinese immigrants in Bangkok, and is now filled with Chinese cultural heritage. We recommend skipping tourist mainstays like Wat Mangkon Kamalawat temple and the main drag Yaowarat in favor of the small museum called Ban Kao Lao Leung in Charoenkrung. The museum displays the history, cultures and everyday life of Chinese immigrants in the neighborhood in tribute to the multiculturalism of the Chao Phraya community.</p>
+                    <h1 class="fs-4 mb-4 text-center">Immerse Yourself in stunning views of the Chao Phraya River at The Deck by The River</h1>
+                    <p>Finish the day on a spectacular high note with a romantic dinner along the Chao Phraya River and absorb a breathtaking view of Wat Arun Temple at The Deck by the River. Indulge in Western and Thai fusion delights enhanced by the setting sun. The restaurant is very popular among foreign visitors who look to relax after a busy day of sightseeing. Thus, it provides an ideal spot to make new acquaintances and exchange sightseeing stories and insights with fellow travelers.</p>
                 </div>
+            </div>
+        </div>
+        <div class="recommended-section">
+            <h1 class="fw-bold mb-4 text-start">RECOMMENDED<br>SINGHA EXPERIENCE</h1>
+            <hr style="width: 8rem; border-bottom: 3px solid #000000; opacity: 1;">
+            <div class="experience-card-group">
             </div>
         </div>
     </div>
     <footer class="c-footer">
-        <div>
+        <div style="background-color: var(--gray);">
             <img src="/assets/back-to-top-btn.png" alt="">
         </div>
         <div>
@@ -112,33 +121,35 @@
         ];
 
         function order(type) {
-            var elements = document.getElementsByClassName('btn-experience-active');
-            for (let index = 0; index < elements.length; index++) {
-                elements[index].classList.remove('btn-experience-active');
-            }
-
             document.getElementsByClassName('experience-card-group')[0].innerHTML = ``;
-            for (let index = 0; index < card.length; index++) {
-                if (card[index][1] != type && type != 'all') {
-                    continue;
+            var alrady = [];
+            for (let index = 0; index < 3; index++) {
+                while(true) {
+                    var rand = Math.floor(Math.random() * 10);
+                    if (!alrady.includes(rand) && rand < 9) {
+                        alrady.push(rand);
+                        break;
+                    }
                 }
+
+                console.log(rand, alrady);
+
                 var html = `
                         <div class="experience-card">
-                            <a href="`+card[index][4]+`" class="experience-card-img">
-                                <img src="/assets/card-`+card[index][0]+`.jpg" alt="">
+                            <a href="`+card[rand][4]+`" class="experience-card-img">
+                                <img src="/assets/card-`+card[rand][0]+`.jpg" alt="">
                             </a>
                             <div class="experience-card-header">
-                                <h1>`+card[index][2]+`</h1>
+                                <h1>`+card[rand][2]+`</h1>
                             </div>
                             <div class="experience-card-body">
-                                <h1>`+card[index][1]+`</h1>
-                                <p>`+card[index][3]+`</p>
-                                <a href="`+card[index][4]+`" class="btn btn-outline-secondary btn-sm px-4 rounded-1">- MORE DETAIL -</a>
+                                <h1>`+card[rand][1]+`</h1>
+                                <p>`+card[rand][3]+`</p>
+                                <a href="`+card[rand][4]+`" class="btn btn-outline-secondary btn-sm px-4 rounded-1">- MORE DETAIL -</a>
                             </div>
                         </div>`;
                 document.getElementsByClassName('experience-card-group')[0].innerHTML += html;
             }
-            document.getElementById(type.replace('SINGHA ', '').toLowerCase()).classList.add('btn-experience-active');
         };
 
         order('all');

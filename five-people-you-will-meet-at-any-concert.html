@@ -26,29 +26,43 @@
     <div class="content">
         <div class="singha-experience">
             <div class="singha-experience-bg-yellow"></div>
-            <div style="z-index: 1; position: relative; text-align: center;">
+            <div style="z-index: 1; position: relative; text-align: center; min-height: 100vh;">
                 <h1 class="fw-bold mb-4 text-start">SINGHA<br>EXPERIENCE</h1>
                 <hr style="width: 8rem; border-bottom: 3px solid #000000; opacity: 1;">
-                <img src="/assets/singha-x.jpg" alt="" class="my-4">
-                <h1 class="fs-5 fw-bold"><a style="color: var(--yellow);">SINGHA</a> MUSIC</h1>
-                <p>24 HOURS BEFORE SHOWTIME WITH BURIN BOONVISUT</p>
-                <p>Read through our interview with Thai singer and celebrity Burin Boonvisut as he shares how he<br>prepares for a big show and lets us in on the details of celebrity life.</p>
-                <a class="btn btn-outline-secondary btn-sm px-4 mb-4 rounded-1">- MORE DETAIL -</a>
-                <hr style="width: 18rem; border-bottom: 1px solid var(--gray); opacity: 1;" class="mx-auto">
-                <h1 class="fs-4 fw-bold mt-5">LATEST<br><a style="color: var(--yellow);">EXPERIENCE</a></h1>
-                <p><b>TYPES</b></p>
-                <button class="btn-experience btn-experience-active" id="all" onclick="order('all')">ALL</button>
-                <button class="btn-experience" id="food" onclick="order('SINGHA FOOD')">FOOD</button>
-                <button class="btn-experience" id="music" onclick="order('SINGHA MUSIC')">MUSIC</button>
-                <button class="btn-experience" id="travel" onclick="order('SINGHA TRAVEL')">TRAVEL</button>
-                <button class="btn-experience" id="entrepreneur" onclick="order('SINGHA ENTREPRENEUR')">ENTREPRENEUR</button>
-                <div class="experience-card-group">
+                <a href="/singha-experience.html" class="back-arrow">
+                    <div>
+                        <img src="/assets/icon-arrow-back.png" alt="">
+                        BACK
+                    </div>
+                </a>
+                <div class="py-5" style="padding: 8rem; text-align: start;">
+                    <h1 class="fs-4 mb-4 text-center">FIVE PEOPLE YOU ARE LIKELY TO MEET AT A CONCERT</h1>
+                    <p>Concerts are an opportunity for fans to be around other music aficionados and feel like they are part of a community. Regardless of their cultural or biological differences, all concert-goers have one thing in common: a need to release energy by watching their favorite artists perform live. They get together under strobe lights, surrounded by powerful sounds, feeling like they're flying to another realm. </p>
+                    <p>However, there's something particularly fascinating about the different kinds of people who attend concerts on a regular basis. While some show up dressed in a head-to-toe outfit to match the music or artist on stage, others bring an eclectic flavor to the mix that contributes to the vibe of the gig. </p>
+                    <p>We gathered the five different types of people that you are most likely to see at a concert. Scroll down to find out which ones made it to the list!</p>
+                    <h2 class="mb-4 text-center fs-4">The Music Lover</h2>
+                    <p>Die-hard or hardcore fans are the definition we’d like to give to these people. Unlike the majority of concert attendees, they know all the words to every song performed, and they are not afraid to shout them out loudly with a pint of Singha beer in their hands! As if that wasn't enough, they are familiar with the background stories to all the songs, how they did on the charts, in which albums they were, and so on.</p>
+                    <h2 class="mb-4 text-center fs-4">The Sheep</h2>
+                    <p>The Sheep are the most common kind of concert-goers. They understand the lyrics perfectly and, usually, have a deep knowledge and emotional connection to every song. They would follow anything that the artists tell them to do at the concerts, including but not limited to dancing, waving hands and shouting. Without the sheep, the concert would lack a lot of energy and fun, so they are the kind of people you'd be happy to run into at a show and enjoy pints of chilled Singha beer with them.</p>
+                    <h2 class="mb-4 text-center fs-4">The Black Sheep</h2>
+                    <p>As their given name suggests, black sheep are the exact opposite of the classic sheep. 
+                        These concert attendees only watch the performance and won't do anything that takes them out of their comfort zone like singing or dancing. Look around and you'll find, at least, a black sheep at a concert (probably in a corner). </p>
+                    <h2 class="mb-4 text-center fs-4">The OMG I’m Going to Live</h2>
+                    <p>Social Media has completely changed the way we witness events, and concerts are no exception. This type of concert-goers can be real fans or not, but one thing's for sure: they are on their phone during most of the concert and stream the whole thing to make their fans back home jealous. (Perhaps it’s their way to show supports to the artist in technologically-advanced way). It is okay to record or stream, but please be considerate to other people at other people who are trying to enjoy the performance.</p>
+                    <h2 class="mb-4 text-center fs-4">The Really Fan</h2>
+                    <p>Besides the music, real fans have another goal in mind: collecting all of their favorite band's merch. From CDs to hoodies, posters, stickers, t-shirts, and pins, every item is a treasure for real fans, and a way to show their appreciation for the band or musician. After the show is over, they can look at their goodies and feel the same euphoria they experienced at the concert.</p>
                 </div>
+            </div>
+        </div>
+        <div class="recommended-section">
+            <h1 class="fw-bold mb-4 text-start">RECOMMENDED<br>SINGHA EXPERIENCE</h1>
+            <hr style="width: 8rem; border-bottom: 3px solid #000000; opacity: 1;">
+            <div class="experience-card-group">
             </div>
         </div>
     </div>
     <footer class="c-footer">
-        <div>
+        <div style="background-color: var(--gray);">
             <img src="/assets/back-to-top-btn.png" alt="">
         </div>
         <div>
@@ -112,33 +126,35 @@
         ];
 
         function order(type) {
-            var elements = document.getElementsByClassName('btn-experience-active');
-            for (let index = 0; index < elements.length; index++) {
-                elements[index].classList.remove('btn-experience-active');
-            }
-
             document.getElementsByClassName('experience-card-group')[0].innerHTML = ``;
-            for (let index = 0; index < card.length; index++) {
-                if (card[index][1] != type && type != 'all') {
-                    continue;
+            var alrady = [];
+            for (let index = 0; index < 3; index++) {
+                while(true) {
+                    var rand = Math.floor(Math.random() * 10);
+                    if (!alrady.includes(rand) && rand < 9) {
+                        alrady.push(rand);
+                        break;
+                    }
                 }
+
+                console.log(rand, alrady);
+
                 var html = `
                         <div class="experience-card">
-                            <a href="`+card[index][4]+`" class="experience-card-img">
-                                <img src="/assets/card-`+card[index][0]+`.jpg" alt="">
+                            <a href="`+card[rand][4]+`" class="experience-card-img">
+                                <img src="/assets/card-`+card[rand][0]+`.jpg" alt="">
                             </a>
                             <div class="experience-card-header">
-                                <h1>`+card[index][2]+`</h1>
+                                <h1>`+card[rand][2]+`</h1>
                             </div>
                             <div class="experience-card-body">
-                                <h1>`+card[index][1]+`</h1>
-                                <p>`+card[index][3]+`</p>
-                                <a href="`+card[index][4]+`" class="btn btn-outline-secondary btn-sm px-4 rounded-1">- MORE DETAIL -</a>
+                                <h1>`+card[rand][1]+`</h1>
+                                <p>`+card[rand][3]+`</p>
+                                <a href="`+card[rand][4]+`" class="btn btn-outline-secondary btn-sm px-4 rounded-1">- MORE DETAIL -</a>
                             </div>
                         </div>`;
                 document.getElementsByClassName('experience-card-group')[0].innerHTML += html;
             }
-            document.getElementById(type.replace('SINGHA ', '').toLowerCase()).classList.add('btn-experience-active');
         };
 
         order('all');
