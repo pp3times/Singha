@@ -40,7 +40,7 @@
 
 body {
     height: 100vh;
-    background-image: url('/assets/legal/bg-age.jpg');
+    background-image: url('/assets/img/legal/bg-age.jpg');
     background-size: cover;
     background-position: center center;
     position: relative;
