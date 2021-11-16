@@ -35,4 +35,4 @@
 	- [ ] FIVE PEOPLE YOU ARE LIKELY TO MEET AT A CONCERT ([Fang])
 	- [ ] HOW TO BUILD A DREAM TEAM ([Fang])
 	- [ ] ALONG THE CHAO PHRAYA RIVER ([Fang])
-- [ ] contact ([Jrm])
+- [ ] contact ([Fang])
