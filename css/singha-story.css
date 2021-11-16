@@ -3,12 +3,44 @@
     --white: #ffffff;
     --gray: #eaeae9;
 }
+
+/* Fonts */
+@font-face {
+    font-family: "korolev";
+    src: url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "korolev";
+    src: url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "korolev";
+    src: url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 300;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
 * {
-    font-family: sans-serif;
+    font-family: "korolev", sans-serif!important;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 body {
-    background-color: var(--yellow);
+    background-color: var(--white);
+    overflow-x: hidden;
+    width: 100vw;
 }
 .c-nav {
     position: fixed;
@@ -17,6 +49,7 @@ body {
     background-color: var(--white);
     display: flex;
     align-items: center;
+    z-index: 100000;
 }
 .c-nav > .c-nav-body {
     padding: 0 25rem;
@@ -134,5 +167,240 @@ body {
 }
 
 .content {
-    padding-top: 6rem;
+    /* max-width: 2000px; */
+    height: 86vh;
+    margin: auto auto;
+    background: #ffc522 url("/assets/img/singha-story/bg-02.jpg") center bottom no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    margin-top: 16rem;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    height: 100%;
+    padding:0 25rem;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.2em;
+    letter-spacing: 2px;
+}
+
+.box > div > p {
+    font-weight: 400;
+}
+
+.left {
+    flex-direction: column;
+}
+
+.line {
+    width: 7.5rem;
+    height: 4px;
+    background-color: #000;
+}
+
+.singmain {
+    z-index: 1;
+    position: absolute;
+    width: 43%;
+    left: 42rem;
+    top: 13rem;
+    height: auto;
+}
+
+.left-bottom {
+    margin-top: 6rem;
+    position: relative;
+    width: 25rem;
+    font-size: 58px;
+    color: #fff;
+}
+
+.left-bottom > .sub-text {
+    position: absolute;
+    z-index: 3;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 1.2em;
+    color: #000
+}
+
+.learnmore {
+    padding: 1px 0;
+    background: none;
+    border-color: #333;
+    font-size: 12px;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 5rem;
+}
+
+a.learntop {
+    border: 1px solid #333!important;
+    font-size: 12px!important;
+    width: 160px;
+    height: 28px;
+}
+a.learntop:hover {
+    border: none !important;
+}
+
+.learnmore .btn:before {
+    content: none;
+}
+
+.learnmore .btn:hover {
+    border-color: #FFF;
+    background: #FFF;
+    color: #ffc522;
+}
+
+.historical {
+    background-color: #FFF;
+    margin-top: 50px;
+    display: flex;
+    position: relative;
+}
+
+.singhistorical {
+    width: 60%;
+    height: 100%;
+    margin-left: 4.5rem;
+}
+
+.historical > .box > .left-bottom, .historical > .left > .left-bottom {
+    color: var(--yellow)!important;
+    margin-left: 10px;
+}
+
+.historical > .box > .left-bottom > .sub-text {
+    color: #666;
+}
+
+.historical > .left {
+    position: absolute;
+    bottom: -6rem;
+    left: 25rem;
+}
+
+.historical > .box > .learnmore, .historical > .box > .learnmore > .learntop {
+    color: #666;
+    border-color: #666!important;
+    margin-left: 4px;
+}
+
+.historical > .box > .learnmore > .learntop:hover {
+    background: var(--yellow);
+    color: #FFF;
+}
+
+/* -===- */
+.thaibrew {
+    background-color: #FFF;
+    background-image: url(/assets/img/singha-story/bg-01.jpg);
+    margin-top: 50px;
+    display: flex;
+    max-width: 2000px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 60vh;
+}
+
+.singthaibrew {
+    width: 40%;
+    height: 90%;
+    left: 42.5rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.thaibrew > .box > .left-bottom, .thaibrew > .left > .left-bottom {
+    color: var(--yellow)!important;
+    margin-left: 10px;
+}
+
+.thaibrew > .box > .left-bottom > .sub-text {
+    color: #666;
+}
+
+.thaibrew > .left {
+    position: absolute;
+    bottom: -5rem;
+    left: -2rem;
+}
+
+.thaibrew > .box > .learnmore, .thaibrew > .box > .learnmore > .learntop {
+    color: #666;
+    border-color: #666!important;
+    margin-left: 4px;
+}
+
+.thaibrew > .box > .learnmore > .learntop:hover {
+    background: var(--yellow);
+    color: #FFF;
+}
+
+/* ==--== */
+
+.download {
+    background-color: #FFC523;
+    display: flex;
+    position: relative;
+    z-index: -1;
+    height: 60vh;
+}
+
+.singdownload {
+    width: 40%;
+    height: 90%;
+    left: 23rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.download > .box > .left-bottom, .download > .left > .left-bottom {
+    color: var(--white)!important;
+    margin-left: 10px;
+}
+
+.download > .box > .left-bottom > .sub-text {
+    color: #fff;
+}
+
+.download > .left {
+    position: absolute;
+    bottom: 20px;
+    left: 40rem;
+    z-index: 1 ;
+}
+
+.download > .box > .learnmore, .download > .box > .learnmore > .learntop {
+    color: #666;
+    border-color: #666!important;
+    margin-left: 4px;
+    z-index: 1000;
+}
+
+.download > .box > .learnmore > .learntop:hover {
+    background: var(--yellow);
+    color: #FFF;
+}
+
+.xxx {
+    margin-left: 23rem;
+}
+
+a.lm2 {
+    border: #fff 1px solid!important;
+    font-size: 12px!important;
+    width: 160px;
+    height: 28px;
+    color: white;
 }

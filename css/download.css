@@ -1,0 +1,179 @@
+.container-c {
+    width: 100%;
+}
+
+#container {
+    background-color: white;
+}
+
+#textbox .container {
+    position: relative;
+    padding-bottom: 220px;
+    margin-top: 100px;
+}
+
+.topic1 {
+    font-size: 50px;
+    margin-left: 100px;
+    margin-top: 400px;
+    font-weight: 600;
+}
+
+.topic2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-left: 100px;
+}
+
+.hr {
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 200px;
+    height: 4px;
+    background: rgb(51, 51, 51);
+}
+
+#top {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 50px 0 675px;
+    background: #ffc522 url(/pleng/bg-02.jpg) center bottom no-repeat;
+}
+
+
+#bottom {
+    background: url(/pleng/bg-01.jpg) center bottom no-repeat;
+    height: 600px;
+    margin-top: -500px;
+}
+
+.back {
+    padding-left: 100;
+    padding-top: 10;
+    letter-spacing: 1px;
+}
+
+.arrow {
+    display: block;
+    margin: 8px 0px;
+}
+
+.text {
+    color: white;
+    font-size: 22;
+    margin-left: -70;
+}
+
+.card-content-logo {
+    margin-top: -600px;
+    padding-left: 100px;
+}
+
+.card-content-can {
+    margin-top: -500px;
+    padding-left: 100px;
+}
+
+.card-content-bottle {
+    padding-left: 100px;
+}
+
+.card-box-bottle1{
+    background-color: #ECECEC;
+    width: 500px;
+    height: 670px;
+    padding-top: 20px;
+    margin-top: 50px;
+}
+
+.card-box-bottle2{
+    background-color: #ECECEC;
+    width: 500px;
+    height: 670px;
+    padding-top: 20px;
+    margin-top: 230px;
+}
+
+#img-bottle1{
+    width: auto;
+    height: 570px;
+    position: absolute;
+    transform: translate(0,-130px);
+}
+
+#img-bottle2{
+    width: auto;
+    height: 675px;
+    width: 450px;
+    position: absolute;
+    transform: translate(0,-170px);
+}
+
+#card-bg {
+    background-color: #ECECEC;
+    padding: 20;
+    height: 650px;
+    width: 500px;
+    border: 1px solid #ECECEC;
+}
+
+#card-bg-can {
+    background-color: #ECECEC;
+    padding: 20;
+    height: 650px;
+    width: 500px;
+    border: 1px solid #ECECEC;
+}
+
+
+.card-bg-white{
+    width: 450px;
+    height: 450px;
+    background-color: white;
+}
+
+#img-box {
+    background-color: white;
+    width: 50px;
+}
+
+#card-text-logo {
+    font-size: 60;
+    font-weight: bold;
+    margin-bottom: -20;
+}
+
+#card-text-can {
+    font-size: 60;
+    font-weight: bold;
+    margin-bottom: -60;
+}
+
+.card-box-logo {
+    padding-top: 110px;
+}
+
+.card-box-can {
+    padding-top: 20px;
+}
+
+.btn-download {
+    font-size: 13;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 5px;
+    width: 150;
+    padding: 2px;
+}
+
+.btn-download:hover {
+    font-size: 13;
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+    color: white;
+    border-radius: 5px;
+    width: 150;
+    padding: 2px;
+    opacity: 1;
+}
