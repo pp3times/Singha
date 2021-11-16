@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/our-beer.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <title>Singha | The Original Thai Beer</title>
+    <style>
+        #top-section {
+            max-width: 2000px;
+            margin: 0 auto;
+            padding: 40px 0 800px;
+            background: #ffc522 url("../images/bg-02.jpg") center bottom no-repeat;
+        }
+
+        #top-section .container {
+            position: relative;
+        }
+
+        #top-section .page-headline h1 {
+            position: relative;
+            padding-bottom: 10px;
+            color: #333;
+            font-size: 50px;
+            text-transform: uppercase;
+            line-height: 1.2em;
+            letter-spacing: 2px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #top-section .page-headline .headline-primary {
+            font-weight: 700;
+        }
+
+        #top-section .page-headline .headline-secondary {
+            font-weight: 400;
+        }
+
+        #top-section .page-headline .hr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 160px;
+            height: 4px;
+            background: #333;
+        }
+
+        #top-section .navigation {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: calc(100% - 30px);
+            height: 130px;
+            border-bottom: 1px solid #333;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #top-section .navigation .nav-block {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 950px;
+            height: 100%;
+            border-left: 1px solid #333;
+        }
+
+        #top-section .navigation .nav-block .nav-content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 75%;
+            padding: 20px;
+        }
+
+        #top-section .navigation .nav-block .nav-content .nav-item {
+            padding: 0 20px;
+            cursor: pointer;
+        }
+
+        #top-section .navigation .nav-block .nav-content .nav-item .item-img {
+            margin: 0 auto;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #top-section .navigation .nav-block .nav-content .nav-item .item-img.item-img-active {
+            display: none;
+        }
+
+        #top-section .navigation .nav-block .nav-content .nav-item .item-img.item-img-normal {
+            display: block;
+        }
+
+        #top-section .navigation .nav-block .nav-content .nav-item .item-name {
+            margin-top: 6px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            text-align: center;
+            line-height: 1;
+        }
+
+        #top-section .navigation .nav-block .nav-content .nav-item.active .item-img-active {
+            display: block;
+        }
+
+        #top-section .navigation .nav-block .nav-content .nav-item.active .item-img-normal {
+            display: none;
+        }
+
+        #top-section .navigation .nav-block .nav-content .nav-item.active .item-name {
+            font-weight: 700;
+            color: #FFF;
+        }
+
+        #top-section .navigation .nav-block .guarantee {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 25%;
+            height: 100%;
+            padding-left: 30px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-left: 1px solid #333;
+            color: #333;
+        }
+
+        #top-section .navigation .nav-block .guarantee img {
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #top-section .navigation .nav-block .guarantee .guarantee-text {
+            padding-left: 14px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #top-section .navigation .nav-block .guarantee .guarantee-text.th {
+            font-size: 18px;
+            line-height: 1.2em;
+        }
+
+        #top-section.fixed {
+            position: fixed;
+            top: 50px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 100%;
+            height: 130px;
+            padding-bottom: 40px;
+            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            background: #ffc522;
+            z-index: 500;
+        }
+
+        #top-section.fixed .page-headline h1 {
+            font-size: 24px;
+        }
+
+        #top-section.fixed .page-headline .hr {
+            width: 100px;
+        }
+
+        #top-section.fixed .navigation {
+            height: 66px;
+        }
+
+        #top-section.fixed .navigation .nav-block {
+            width: 1010px;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content {
+            width: 70%;
+            padding: 0;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item .item-img {
+            height: 38px;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item .item-name {
+            margin-top: 2px;
+            font-size: 11px;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item .item-name::after {
+            display: block;
+            content: attr(data-title);
+            font-weight: normal;
+            height: 1px;
+            color: transparent;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .hop {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 0;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .hop:before {
+            width: 16px;
+            height: 16px;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .year {
+            position: relative;
+            top: -2px;
+            width: auto;
+            text-align: center;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .year .year-be,
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .year .year-ad {
+            display: block;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .year .year-ad:before {
+            display: none;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active:after {
+            display: none;
+        }
+
+        #top-section.fixed .navigation .nav-block .guarantee {
+            width: 30%;
+            padding-right: 30px;
+        }
+
+        #top-section.fixed .navigation .nav-block .guarantee img {
+            height: 50px;
+        }
+
+        #top-section.fixed .navigation .nav-block .guarantee .guarantee-text {
+            font-size: 12px;
+        }
+
+        #top-section.fixed .navigation .nav-block .guarantee .guarantee-text.th {
+            font-size: 18px;
+            line-height: 1.2em;
+        }
+
+        #content {
+            max-width: 2000px;
+            margin: -800px auto 0;
+        }
+
+        #content .product-item .container {
+            position: relative;
+        }
+
+        #content .product-item .product-name {
+            font-size: 118px;
+            font-weight: 700;
+            line-height: 118px;
+            letter-spacing: 3px;
+        }
+
+        #content .product-item .product-size {
+            font-size: 48px;
+            line-height: 48px;
+            letter-spacing: 3px;
+        }
+
+        #content .product-item .product-size .number {
+            font-size: 58px;
+        }
+
+        #content .product-item .international-remark {
+            margin: 10px 0 20px;
+            font-size: 22px;
+            letter-spacing: 1.5px;
+        }
+
+        #content .product-item .info-block {
+            display: inline-block;
+            padding-left: 20px;
+            border-left: 1px solid #333;
+            font-size: 24px;
+            line-height: 1.2em;
+            letter-spacing: 1.5px;
+            text-align: left;
+        }
+
+        #content .product-item .info-block .topic .topic-primary {
+            font-weight: 700;
+        }
+
+        #content .product-item .info-block .detail {
+            margin-top: 3px;
+            line-height: 1.3em;
+        }
+
+        #content .product-item .alcohol-percentage {
+            display: block;
+            margin-top: 60px;
+        }
+
+        #content .product-item .alcohol-percentage .topic .topic-primary {
+            padding-top: 6px;
+        }
+
+        #content .product-item .alcohol-percentage.th .detail {
+            margin-top: -2px;
+        }
+
+        #content .product-item .info-left {
+            position: absolute;
+            text-align: right;
+        }
+
+        #content .product-item .info-left .international {
+            margin-top: 30px;
+        }
+
+        #content .product-item .info-left .international .international-topic {
+            font-size: 30px;
+        }
+
+        #content .product-item .info-left .international .international-topic span {
+            font-weight: 700;
+        }
+
+        #content .product-item .info-left .international .international-size {
+            font-size: 30px;
+            line-height: 48px;
+            letter-spacing: 3px;
+        }
+
+        #content .product-item .info-left .international .international-size .number {
+            font-size: 48px;
+        }
+
+        #content .product-item .info-right {
+            position: absolute;
+            text-align: left;
+        }
+
+        #content .product-item.th .international-remark {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        #content .product-item.th .international-remark span {
+            margin-right: -2px;
+            font-size: 16px;
+        }
+
+        #content #can {
+            text-align: center;
+            min-height: 820px;
+        }
+
+        #content #can .product-img {
+            margin-right: 40px;
+        }
+
+        #content #can .info-left {
+            top: 100px;
+            left: 120px;
+        }
+
+        #content #can .info-left .calorie {
+            margin-top: 24px;
+        }
+
+        #content #can .info-left .international .calorie {
+            margin-top: 14px;
+        }
+
+        #content #can .info-right {
+            top: 120px;
+            right: 220px;
+        }
+
+        #content #bottle-sm {
+            margin-top: -70px;
+            padding-bottom: 200px;
+            min-height: 800px;
+            text-align: right;
+            background: url("../images/bg-01.jpg") center bottom no-repeat;
+        }
+
+        #content #bottle-sm .product-img {
+            margin-right: 220px;
+        }
+
+        #content #bottle-sm .info-left {
+            top: 100px;
+            left: 240px;
+        }
+
+        #content #bottle-sm .info-left .calorie {
+            margin-top: 10px;
+        }
+
+        #content #bottle-sm .info-right {
+            top: 100px;
+            right: 10px;
+        }
+
+        #content #bottle-lg {
+            min-height: 800px;
+            padding-bottom: 30px;
+            text-align: right;
+            background: #ffc522 url("../images/bg-02.jpg") center bottom -13px no-repeat;
+        }
+
+        #content #bottle-lg .container {
+            -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+        }
+
+        #content #bottle-lg .product-img {
+            margin-right: 220px;
+        }
+
+        #content #bottle-lg .info-left {
+            top: 160px;
+            left: 60px;
+        }
+
+        #content #bottle-lg .info-left .calorie {
+            margin-top: 10px;
+        }
+
+        #content #bottle-lg .info-right {
+            top: 180px;
+            right: 200px;
+        }
+
+        #content .action {
+            position: relative;
+            padding: 30px 0 20px;
+        }
+
+        #content .action #back-to-top-btn {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+
+        #content .action #back-to-top-btn:hover {
+            -webkit-transform: translate(-50%, -10px);
+            transform: translate(-50%, -10px);
+        }
+
+        #content.fixed {
+            position: relative;
+            margin-top: 50px;
+            background: url("../images/bg-02.jpg") center top 270px no-repeat;
+        }
+
+        #content.fixed:before {
+            content: '';
+            position: absolute;
+            top: -300px;
+            left: 0;
+            width: 100%;
+            height: 580px;
+            background: #ffc522;
+        }
+
+        .country h4 {
+            font-size: 15px;
+            line-height: 17px;
+            padding: 0;
+            margin: 0;
+        }
+
+        #where-to-find {
+            margin-top: -37px;
+        }
+
+        #where-to-find .page-headline h2 {
+            position: relative;
+            padding-bottom: 27px;
+            color: #333;
+            font-size: 50px;
+            line-height: 1.2em;
+            letter-spacing: 2px;
+        }
+
+        #where-to-find .page-headline .headline-primary {
+            font-weight: 700;
+        }
+
+        #where-to-find .page-headline .headline-secondary {
+            font-weight: 400;
+        }
+
+        #where-to-find .page-headline .hr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 175px;
+            height: 4px;
+            background: #333;
+        }
+
+        #where-to-find .maps-block {
+            background-image: url(../images/where-to-find-maps/bg.png);
+            background-repeat: repeat-x;
+            background-position: center;
+            margin-top: 44px;
+            margin-bottom: 26px;
+        }
+
+        #where-to-find .sub-headline {
+            padding-bottom: 13px;
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        #where-to-find .sub-headline .active {
+            color: #ffcc33;
+        }
+
+        #where-to-find .sub-headline .title {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        #where-to-find .sub-headline .hr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 55px;
+            height: 1px;
+            background: #333;
+        }
+
+        #where-to-find .back-btn {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-top: -8px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        #where-to-find .back-btn a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: auto;
+            color: #000;
+        }
+
+        #where-to-find .back-btn img {
+            vertical-align: middle;
+            height: 14px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #where-to-find .back-btn:hover img {
+            margin-right: 10px;
+        }
+
+        #where-to-find .text-block {
+            position: relative;
+            clear: both;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+
+        #where-to-find .text-block .continents-block {
+            position: absolute;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            visibility: visible;
+            opacity: 1;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+
+        #where-to-find .text-block .continents-block.inactive {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #where-to-find .text-block .continents-block .continent {
+            margin-bottom: 32px;
+        }
+
+        #where-to-find .text-block .continents-block .continent:nth-child(even) {
+            width: 30%;
+        }
+
+        #where-to-find .text-block .continents-block .continent:nth-child(even) .country {
+            width: 33.3333%;
+        }
+
+        #where-to-find .text-block .continents-block .continent:nth-child(odd) {
+            width: 70%;
+        }
+
+        #where-to-find .text-block .continents-block .continent:nth-child(odd) .country {
+            width: 20%;
+        }
+
+        #where-to-find .text-block .continents-block .continent .countries-block {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            width: 90%;
+        }
+
+        #where-to-find .text-block .continents-block .continent .countries-block .country {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 29px;
+            font-size: 15px;
+            font-weight: 400;
+            color: #666;
+            cursor: pointer;
+            -webkit-transition: .2s;
+            transition: .2s;
+            position: relative;
+        }
+
+        #where-to-find .text-block .continents-block .continent .countries-block .country:hover,
+        #where-to-find .text-block .continents-block .continent .countries-block .country.active {
+            color: #ffcc33;
+        }
+
+        #where-to-find .text-block .continents-block .continent .countries-block .country::before {
+            content: '';
+            display: inline-block;
+            height: 17px;
+            width: 17px;
+            margin-right: 7px;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+
+        #where-to-find .text-block .continents-block .continent .countries-block .country::before {
+            background-image: url(../images/where-to-find-maps/arrow.png);
+        }
+
+        #where-to-find .text-block .continents-block .continent .countries-block .country:hover::before,
+        #where-to-find .text-block .continents-block .continent .countries-block .country.active::before {
+            background-image: url(../images/where-to-find-maps/arrow-active.png);
+        }
+
+        #where-to-find .text-block .continents-block .continent .countries-block .country span {
+            display: inline-block;
+            line-height: 17px;
+            position: absolute;
+            left: 24px;
+            top: 0;
+        }
+
+        #where-to-find .text-block .continents-block .continent[data-name="Africa"] .country {
+            width: 50%;
+        }
+
+        #where-to-find .text-block .country-detail {
+            position: absolute;
+            width: 100%;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: .2s;
+            transition: .2s;
+        }
+
+        #where-to-find .text-block .country-detail.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #where-to-find .text-block .country-detail .country-name {
+            color: #333333;
+            font-size: 30px;
+            margin-bottom: 22px;
+        }
+        #where-to-find .text-block .country-detail .distributors-block {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        #where-to-find .text-block .country-detail .distributors-block .distrubutor {
+            width: 33.3333%;
+            margin-bottom: 54px;
+            padding-right: 30px;
+        }
+
+        #where-to-find .text-block .country-detail .distributors-block .distrubutor .distributor-name {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        #where-to-find .text-block .country-detail .distributors-block .distrubutor .hr {
+            width: 55px;
+            height: 1px;
+            background: #7f7f7f;
+            margin-bottom: 9px;
+        }
+
+        #where-to-find .text-block .country-detail .distributors-block .distrubutor .list-item {
+            color: #666;
+            font-size: 16px;
+        }
+
+        #where-to-find .text-block .country-detail .distributors-block .distrubutor .list-item:not(:last-child) {
+            margin-bottom: 9px;
+        }
+
+        #where-to-find .text-block .country-detail .distributors-block .distrubutor .list-item .th {
+            font-size: 22px;
+        }
+
+        #where-to-find .text-block .country-detail .distributors-block .distrubutor .list-item img {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="c-nav" style="z-index: 5;">
+        <div class="c-nav-body">
+            <a href="" class="c-nav-brand"><img src="jean/logo.png"></a>
+            <ul>
+                <li>SINGHA STORY</li>
+                <li>OUR BEER</li>
+                <li>SINGHA RESERVE</li>
+                <li>UPCOMING EVENTS</li>
+                <li>SINGHA EXPRERIENCE</li>
+                <li>CONTACT US</li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <div class="content">
+        <div class="topbox d-flex justify-content-center" style="padding-top: 2.5rem">
+            <div class="headtopbox d-flex">
+                <div class="h1 h-100 align-items-center d-flex"
+                    style="border-bottom: 4px solid black; padding-right: 3rem;">
+                    <div>
+                        <div>OUR</div>
+                        <div>BEER</div>
+                    </div>
+                </div>
+                <div class="middletopbox d-flex fw-normal">
+                    <div class="p-3 d-flex flex-column align-items-center">
+                        <img class="pb-2" src="jean/our-beer-can-active.png" alt="">
+                        <p>CAN</p>
+                    </div>
+                    <div class="p-3 d-flex flex-column align-items-center">
+                        <img class="pb-2" width="16px" src="jean/our-beer-bottle-sm-normal.png" alt="">
+                        <p>BOTTLE</p>
+                    </div>
+                    <div class="p-3 d-flex flex-column align-items-center">
+                        <img class="pb-2" src="jean/our-beer-bottle-lg-normal.png" alt="">
+                        <p>BOTTLE</p>
+                    </div>
+                    <div class="p-3 d-flex flex-column align-items-center">
+                        <img class="pb-2" width="140px" src="jean/where-to-find-normal.png" alt="">
+                        <p>WHERE TO FIND SINGHA</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center fw-normal"
+                    style="border-bottom: 1px solid black; font-size: 0.8rem ;">
+                    <div style="padding-left: 25px;">
+                        <img class="pb-2" src="jean/icon-guarantee.png" alt="">
+                    </div>
+                    <div style="padding-left: 20px;">
+                        <p style="margin: 0;">PREMIUM INGREDIENT</p>
+                        <p style="margin: 0;">SELECTION</p>
+                        <p style="margin: 0;">FOR QUALITY BEER.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maincontent d-flex  justify-content-center" style="padding-top: 3rem;">
+            <div>
+                <div class="can d-flex " style="position: relative; padding-left: 15rem; padding-right:20rem">
+                    <div class="d-flex">
+                        <p data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="font-size: 6rem; font-weight: bold; margin: 0; padding-top: 9rem; line-height: 70%; position: absolute; left: 10rem;"
+                            id="#can">CAN</p>
+                        <p data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="font-size: 3.5rem; margin: 0; position: absolute; left: 12.5rem; top: 13.5rem">320ml.
+                        </p>
+                        <p data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="font-size: 1.3rem; margin: 0; position: absolute; left: 10rem; top: 18.5rem">EXPORT
+                            SIZE 330 ml.</p>
+                        <div data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="position: absolute; left: 14rem; top:25rem; border-left: 1.5px solid;">
+                            <p class="text-end"
+                                style="font-size: 1.3rem; font-weight: bold; margin: 0; line-height: 70%; padding-left: 1.5rem; padding-top: 1rem;">
+                                CALORIE</p>
+                            <p class="text-end"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                                119 kcal.</p>
+                        </div>
+                    </div>
+                    <img data-aos="fade-up" src="jean/our-beer-can.png" alt="">
+                    <div>
+                        <div data-aos="fade-left" data-aos-duration="1000" class="text-end"
+                            style="position: absolute; right: 18rem; top:10rem; border-left: 1.5px solid">
+                            <p class="text-start"
+                                style="font-size: 1.5rem; font-weight: bold; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                PRODUCT</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                DIMENSIONS</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                W 6.6 CM.</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;  padding-bottom: 1rem;">
+                                H 11.52 CM.</p>
+                        </div>
+                        <div data-aos="fade-left" data-aos-duration="1000" class="text-end"
+                            style="position: absolute; right: 18rem; top:23rem; border-left: 1.5px solid">
+                            <p class="text-start"
+                                style="font-size: 1.5rem; font-weight: bold; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                5%</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                ALCOHOL BY</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;  padding-bottom: 1rem;">
+                                VOLUME</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="bottle-sm d-flex " style="position: relative; padding-left: 47rem; padding-right:20rem">
+                    <div class="d-flex">
+                        <p data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="font-size: 6rem; font-weight: bold; margin: 0; padding-top: 9rem; line-height: 70%; position: absolute; left: 17rem;">
+                            BOTTLE</p>
+                        <p data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="font-size: 3.5rem; margin: 0; position: absolute; left: 30rem; top: 13.5rem">320ml.
+                        </p>
+                        <p data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="font-size: 1.3rem; margin: 0; position: absolute; left: 27rem; top: 18.5rem">EXPORT
+                            SIZE 330 ml.</p>
+                        <div data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="position: absolute; left: 32rem; top:25rem ; border-left: 1.5px solid;">
+                            <p class="text-end"
+                                style="font-size: 1.3rem; font-weight: bold; margin: 0; line-height: 70%; padding-left: 1.5rem; padding-top: 1rem;">
+                                CALORIE</p>
+                            <p class="text-end"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                                119 kcal.</p>
+                        </div>
+                    </div>
+                    <img data-aos="fade-up"
+                        src="https://cdn.discordapp.com/attachments/896721421621919754/909854073602318346/our-beer-bottle-sm.png"
+                        alt="">
+                    <div>
+                        <div data-aos="fade-left" data-aos-duration="1000" class="text-end"
+                            style="position: absolute; right: 6rem; top:12rem; border-left: 1.5px solid">
+                            <p class="text-start"
+                                style="font-size: 1.5rem; font-weight: bold; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                PRODUCT</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                DIMENSIONS</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                W 5.8 CM.</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;  padding-bottom: 1rem;">
+                                H 23.1 CM.</p>
+                        </div>
+                        <div data-aos="fade-left" data-aos-duration="1000" class="text-end"
+                            style="position: absolute; right: 6rem; top:25rem; border-left: 1.5px solid">
+                            <p class="text-start"
+                                style="font-size: 1.5rem; font-weight: bold; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                5%</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                ALCOHOL BY</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;  padding-bottom: 1rem;">
+                                VOLUME</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="bottle-lg d-flex "
+                    style="position: relative; padding-left: 20rem; padding-right: 20rem; padding-top: 5rem;">
+                    <div class="d-flex">
+                        <p data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="font-size: 6rem; font-weight: bold; margin: 0; padding-top: 9rem; line-height: 70%; position: absolute; left: 1rem;">
+                            BOTTLE</p>
+                        <p data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="font-size: 3.5rem; margin: 0; position: absolute; left: 14.5rem; top: 18.5rem">620ml.
+                        </p>
+                        <p data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="font-size: 1.3rem; margin: 0; position: absolute; left: 11.5rem; top: 23.5rem">EXPORT
+                            SIZE 630 ml.</p>
+                        <div data-aos="fade-right" data-aos-duration="1000" class="text-end"
+                            style="position: absolute; left: 17rem; top: 30rem ; border-left: 1.5px solid;">
+                            <p class="text-end"
+                                style="font-size: 1.3rem; font-weight: bold; margin: 0; line-height: 70%; padding-left: 1.5rem; padding-top: 1rem;">
+                                CALORIE</p>
+                            <p class="text-end"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">
+                                229 kcal.</p>
+                        </div>
+                    </div>
+                    <img data-aos="fade-up"
+                        src="https://cdn.discordapp.com/attachments/896721421621919754/909854610926215249/our-beer-bottle-lg.png"
+                        alt="">
+                    <div>
+                        <div data-aos="fade-left" data-aos-duration="1000" class="text-end"
+                            style="position: absolute; right: 18rem; top:16rem; border-left: 1.5px solid">
+                            <p class="text-start"
+                                style="font-size: 1.5rem; font-weight: bold; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                PRODUCT</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                DIMENSIONS</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                W 7.37 CM.</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;  padding-bottom: 1rem;">
+                                H 28 CM.</p>
+                        </div>
+                        <div data-aos="fade-left" data-aos-duration="1000" class="text-end"
+                            style="position: absolute; right: 18rem; top:29rem; border-left: 1.5px solid">
+                            <p class="text-start"
+                                style="font-size: 1.5rem; font-weight: bold; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                5%</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;">
+                                ALCOHOL BY</p>
+                            <p class="text-start"
+                                style="font-size: 1.3rem; margin: 0; line-height: 70%; padding-left: 1.3rem; padding-top: 1rem;  padding-bottom: 1rem;">
+                                VOLUME</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="where-to-find" class="product-item">
+
+        <div class="container">
+
+            <div class="page-headline" data-aos="fade-up">
+                <h2>
+                    <span class="headline-primary">WHERE TO FIND</span><br>
+                    <span class="headline-secondary">SINGHA DISTRIBUTOR</span>
+                </h2>
+                <div class="hr"></div>
+            </div>
+
+
+            <div class="maps-block" data-aos="fade-up">
+                <img class="maps" src="https://singha.com/images/where-to-find-maps/maps-1.svg">
+            </div>
+
+
+            <div class="text-block">
+
+                <div class="continents-block">
+                    <div class="continent" data-id="1" data-name="Asia" data-aos="fade-up" data-aos-delay="200">
+                        <div class="sub-headline" data-aos="fade-up">
+                            <h3 class="title active">Asia</h3>
+                            <div class="hr"></div>
+                        </div>
+
+                        <ul class="countries-block">
+                            <li class="country" data-id="2">
+                                <h4>Bahrain</h4>
+                            </li>
+                            <li class="country" data-id="20">
+                                <h4>Cambodia</h4>
+                            </li>
+                            <li class="country" data-id="4">
+                                <h4>China</h4>
+                            </li>
+                            <li class="country" data-id="6">
+                                <h4>Hong Kong</h4>
+                            </li>
+                            <li class="country" data-id="7">
+                                <h4>India</h4>
+                            </li>
+                            <li class="country" data-id="22">
+                                <h4>Indonesia</h4>
+                            </li>
+                            <li class="country" data-id="8">
+                                <h4>Israel</h4>
+                            </li>
+                            <li class="country" data-id="9">
+                                <h4>Japan</h4>
+                            </li>
+                            <li class="country" data-id="10">
+                                <h4>Korea</h4>
+                            </li>
+                            <li class="country" data-id="25">
+                                <h4>Laos</h4>
+                            </li>
+                            <li class="country" data-id="21">
+                                <h4>Malaysia</h4>
+                            </li>
+                            <li class="country" data-id="61">
+                                <h4>Maldives</h4>
+                            </li>
+                            <li class="country" data-id="11">
+                                <h4>Mongolia</h4>
+                            </li>
+                            <li class="country" data-id="19">
+                                <h4>Myanmar</h4>
+                            </li>
+                            <li class="country" data-id="12">
+                                <h4>Nepal</h4>
+                            </li>
+                            <li class="country" data-id="14">
+                                <h4>Philippines</h4>
+                            </li>
+                            <li class="country" data-id="15">
+                                <h4>Singapore</h4>
+                            </li>
+                            <li class="country" data-id="16">
+                                <h4>Sri Lanka</h4>
+                            </li>
+                            <li class="country" data-id="17">
+                                <h4>Taiwan</h4>
+                            </li>
+                            <li class="country" data-id="18">
+                                <h4>UAE</h4>
+                            </li>
+                            <li class="country" data-id="23">
+                                <h4>Vietnam</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="continent" data-id="2" data-name="UK" data-aos="fade-up" data-aos-delay="200">
+                        <div class="sub-headline" data-aos="fade-up">
+                            <h3 class="title ">UK</h3>
+                            <div class="hr"></div>
+                        </div>
+
+                        <ul class="countries-block">
+                            <li class="country" data-id="26">
+                                <h4>Ireland</h4>
+                            </li>
+                            <li class="country" data-id="27">
+                                <h4>UK</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="continent" data-id="3" data-name="Europe" data-aos="fade-up" data-aos-delay="200">
+                        <div class="sub-headline" data-aos="fade-up">
+                            <h3 class="title ">Europe</h3>
+                            <div class="hr"></div>
+                        </div>
+
+                        <ul class="countries-block">
+                            <li class="country" data-id="28">
+                                <h4>Austria</h4>
+                            </li>
+                            <li class="country" data-id="29">
+                                <h4>BENELUX</h4>
+                            </li>
+                            <li class="country" data-id="65">
+                                <h4>Croatia</h4>
+                            </li>
+                            <li class="country" data-id="31">
+                                <h4>Czech</h4>
+                            </li>
+                            <li class="country" data-id="32">
+                                <h4>Denmark</h4>
+                            </li>
+                            <li class="country" data-id="33">
+                                <h4>Estonia</h4>
+                            </li>
+                            <li class="country" data-id="34">
+                                <h4>Finland</h4>
+                            </li>
+                            <li class="country" data-id="35">
+                                <h4>France</h4>
+                            </li>
+                            <li class="country" data-id="36">
+                                <h4>Germany</h4>
+                            </li>
+                            <li class="country" data-id="37">
+                                <h4>Iceland</h4>
+                            </li>
+                            <li class="country" data-id="38">
+                                <h4>Italy</h4>
+                            </li>
+                            <li class="country" data-id="41">
+                                <h4>Norway</h4>
+                            </li>
+                            <li class="country" data-id="42">
+                                <h4>Poland</h4>
+                            </li>
+                            <li class="country" data-id="44">
+                                <h4>Russia</h4>
+                            </li>
+                            <li class="country" data-id="45">
+                                <h4>Slovakia</h4>
+                            </li>
+                            <li class="country" data-id="62">
+                                <h4>Spain</h4>
+                            </li>
+                            <li class="country" data-id="47">
+                                <h4>Sweden</h4>
+                            </li>
+                            <li class="country" data-id="48">
+                                <h4>Switzerland</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="continent" data-id="4" data-name="North America" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="sub-headline" data-aos="fade-up">
+                            <h3 class="title ">North America</h3>
+                            <div class="hr"></div>
+                        </div>
+
+                        <ul class="countries-block">
+                            <li class="country" data-id="50">
+                                <h4>Canada</h4>
+                            </li>
+                            <li class="country" data-id="5">
+                                <h4>Guam</h4>
+                            </li>
+                            <li class="country" data-id="51">
+                                <h4>Mexico</h4>
+                            </li>
+                            <li class="country" data-id="52">
+                                <h4>USA</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="continent" data-id="5" data-name="South America" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="sub-headline" data-aos="fade-up">
+                            <h3 class="title ">South America</h3>
+                            <div class="hr"></div>
+                        </div>
+
+                        <ul class="countries-block">
+                            <li class="country" data-id="55">
+                                <h4>Chile</h4>
+                            </li>
+                            <li class="country" data-id="59">
+                                <h4>Colombia</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="continent" data-id="6" data-name="Africa" data-aos="fade-up" data-aos-delay="200">
+                        <div class="sub-headline" data-aos="fade-up">
+                            <h3 class="title ">Africa</h3>
+                            <div class="hr"></div>
+                        </div>
+
+                        <ul class="countries-block">
+                            <li class="country" data-id="43">
+                                <h4>Réunion</h4>
+                            </li>
+                            <li class="country" data-id="46">
+                                <h4>South Africa</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="continent" data-id="7" data-name="Oceania" data-aos="fade-up" data-aos-delay="200">
+                        <div class="sub-headline" data-aos="fade-up">
+                            <h3 class="title ">Oceania</h3>
+                            <div class="hr"></div>
+                        </div>
+
+                        <ul class="countries-block">
+                            <li class="country" data-id="1">
+                                <h4>Australia</h4>
+                            </li>
+                            <li class="country" data-id="13">
+                                <h4>New Zealand</h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="country-detail">
+                    <div class="sub-headline" data-aos="fade-up">
+                        <div class="title active"></div>
+                        <div class="hr"></div>
+                    </div>
+
+                    <div class="back-btn">
+                        <img src="https://singha.com/images/icon-arrow-back-alternate.png"> &nbsp;BACK
+                    </div>
+
+                    <div class="country-name"></div>
+
+                    <div class="distributors-block">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <footer class="c-footer" style="margin-top: 70rem;">
+
+        <div style="z-index: 1000;">
+            <a href="#top"><img src="/assets/back-to-top-btn.png" alt="" style="cursor: pointer; height: 2.25rem;"></a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="">BOONRAWD.CO.TH</a></li>
+                <li><a href="">SINGHA ONLINE SHOP</a></li>
+                <li><a href="">FB</a></li>
+                <li><a href="">YT</a></li>
+                <li><a href="">IG</a></li>
+            </ul>
+        </div>
+        <div class="c-footer-body">
+            <div>
+                <h1><a href="">HOME</a></h1>
+            </div>
+            <div>
+                <h1><a href="">SINGHA STORY</a></h1>
+                <ul>
+                    <li><a href="">ABOUT SINGHA</a></li>
+                    <li><a href="">HISTORICAL TIMELINE</a></li>
+                    <li><a href="">OUR BREW</a></li>
+                    <li><a href="">DOWNLOAD RESOURCES</a></li>
+                    <li><a href="">ARCHIVE</a></li>
+                    <li><a href="">SINGHA AWARDS</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1><a href="">OUR BEER</a></h1>
+                <ul>
+                    <li><a href="#can">CAN (320 ml.)</a></li>
+                    <li><a href="">BOTTLE (320 ml.)</a></li>
+                    <li><a href="">BOTTLE (620 ml.)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1><a href="">UPCOMING EVENTS</a></h1>
+            </div>
+            <div>
+                <h1><a href="">SINGHA EXPRERIENCE</a></h1>
+            </div>
+            <div>
+                <h1><a href="">CONTACT US</a></h1>
+            </div>
+        </div>
+        <div>
+            <a href="">TERMS & CONDITIONS</a>
+            <p class="mb-0">© COPYRIGHTS 2018 SINGHA CORPORATION CO., LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+</body>
+<script>AOS.init();</script>
+
+</html>

@@ -21,7 +21,7 @@
 	- [x] DOWNLOAD RESOURCES ([Pleng])
 	- [x] ARCHIVES (VDO/GALLERY) ([Jrm]) *
 	- [x] SINGHA AWARDS ([Jrm])
-- [ ] our-beer ([Jean])
+- [x] our-beer ([Jean]) Complete By Jeremy
 - [x] singha-reserve ([Pleng])
 - [ ] events ([Pleng])
 - [ ] singha-experience ([Fang])
