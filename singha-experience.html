@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <title>Singha | The Original Thai Beer</title>
+</head>
+<body>
+    <nav class="c-nav">
+        <div class="c-nav-body">
+            <a href="/" class="c-nav-brand"><img src="/assets/logo.png"></a>
+            <ul>
+                <li><a href="">SINGHA STORY</a></li>
+                <li><a href="">OUR BEER</a></li>
+                <li><a href="">SINGHA RESERVE</a></li>
+                <li><a href="">UPCOMING EVENTS</a></li>
+                <li><a href="singha-experience.html">SINGHA EXPRERIENCE</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="singha-experience">
+            <div class="singha-experience-bg-yellow"></div>
+            <div style="z-index: 1; position: relative; text-align: center;">
+                <h1 class="fw-bold mb-4 text-start">SINGHA<br>EXPERIENCE</h1>
+                <hr style="width: 8rem; border-bottom: 3px solid #000000; opacity: 1;">
+                <img src="/assets/singha-x.jpg" alt="" class="my-4">
+                <h1 class="fs-5 fw-bold"><a style="color: var(--yellow);">SINGHA</a> MUSIC</h1>
+                <p>24 HOURS BEFORE SHOWTIME WITH BURIN BOONVISUT</p>
+                <p>Read through our interview with Thai singer and celebrity Burin Boonvisut as he shares how he<br>prepares for a big show and lets us in on the details of celebrity life.</p>
+                <a class="btn btn-outline-secondary btn-sm px-4 mb-4 rounded-1">- MORE DETAIL -</a>
+                <hr style="width: 18rem; border-bottom: 1px solid var(--gray); opacity: 1;" class="mx-auto">
+                <h1 class="fs-4 fw-bold mt-5">LATEST<br><a style="color: var(--yellow);">EXPERIENCE</a></h1>
+                <p><b>TYPES</b></p>
+                <button class="btn-experience btn-experience-active" id="all" onclick="order('all')">ALL</button>
+                <button class="btn-experience" id="food" onclick="order('SINGHA FOOD')">FOOD</button>
+                <button class="btn-experience" id="music" onclick="order('SINGHA MUSIC')">MUSIC</button>
+                <button class="btn-experience" id="travel" onclick="order('SINGHA TRAVEL')">TRAVEL</button>
+                <button class="btn-experience" id="entrepreneur" onclick="order('SINGHA ENTREPRENEUR')">ENTREPRENEUR</button>
+                <div class="experience-card-group">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="c-footer">
+        <div>
+            <img src="/assets/back-to-top-btn.png" alt="">
+        </div>
+        <div>
+            <ul>
+                <li><a href="">BOONRAWD.CO.TH</a></li>
+                <li><a href="">SINGHA ONLINE SHOP</a></li>
+                <li><a href="">FB</a></li>
+                <li><a href="">YT</a></li>
+                <li><a href="">IG</a></li>
+            </ul>
+        </div>
+        <div class="c-footer-body">
+            <div>
+                <h1><a href="">HOME</a></h1>
+            </div>
+            <div>
+                <h1><a href="">SINGHA STORY</a></h1>
+                <ul>
+                    <li><a href="">ABOUT SINGHA</a></li>
+                    <li><a href="">HISTORICAL TIMELINE</a></li>
+                    <li><a href="">OUR BREW</a></li>
+                    <li><a href="">DOWNLOAD RESOURCES</a></li>
+                    <li><a href="">ARCHIVE</a></li>
+                    <li><a href="">SINGHA AWARDS</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1><a href="">OUR BEER</a></h1>
+                <ul>
+                    <li><a href="">CAN (320 ml.)</a></li>
+                    <li><a href="">BOTTLE (320 ml.)</a></li>
+                    <li><a href="">BOTTLE (620 ml.)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1><a href="">UPCOMING EVENTS</a></h1>
+            </div>
+            <div>
+                <h1><a href="">SINGHA EXPRERIENCE</a></h1>
+            </div>
+            <div>
+                <h1><a href="">CONTACT US</a></h1>
+            </div>
+        </div>
+        <div>
+            <a href="">TERMS & CONDITIONS</a>
+            <p class="mb-0">© COPYRIGHTS 2018 SINGHA CORPORATION CO., LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    <script>
+        var card = [
+            [1, `SINGHA MUSIC`, `SINGHA KOLOUR IN THE PARK 2020`, `'Kolour in the Park 2020': An unforgettable Music and Art Festival.`],
+            [2, `SINGHA FOOD`, `SINGHA COOKING AT HOME 2020`, `The weekend is just around the corner, why not invite some friends over to cook up a simple party menu?`],
+            [3, `SINGHA MUSIC`, `A DAY WITH OLYMPIC DIGGER`, `We spent a day with Olympic Digger to dive into the world of vinyl records and analog music. Discover how this music store first opened and meet the p...`],
+            [4, `SINGHA FOOD`, `BEER RECIPE`, `There’s more than one way to enjoy Singha beer. Find out how to use it in meals with these five delicious recipes.`],
+            [5, `SINGHA ENTREPRENEUR`, `FIRST BUSINESS TRIP ABROAD`, `Going on a business trip abroad? Here’s everything you need to know, bring, and prepare for.`],
+            [6, `SINGHA FOOD`, `THAI FOOD THAT TASTE UNEXPECTEDLY GOOD WITH BEER`, `Aside from the usual deep fried appetizers, it’s not surprise that the original Thai beer also complements Thai dishes. Here’s a list of Thai food tha...`],
+            [7, `SINGHA MUSIC`, `FIVE PEOPLE YOU ARE LIKELY TO MEET AT A CONCERT`, `Going to a concert? Here are five kinds of people you are guaranteed to meet.`],
+            [8, `SINGHA ENTREPRENEUR`, `HOW TO BUILD A DREAM TEAM`, `What makes a successful team? Here’s six tips to help you succeed at any team project.`],
+            [9, `SINGHA TRAVEL`, `ALONG THE CHAO PHRAYA RIVER`, `What makes a successful team? Here’s six tips to help you succeed at any team project.`]
+        ];
+
+        function order(type) {
+            var elements = document.getElementsByClassName('btn-experience-active');
+            for (let index = 0; index < elements.length; index++) {
+                elements[index].classList.remove('btn-experience-active');
+            }
+
+            document.getElementsByClassName('experience-card-group')[0].innerHTML = ``;
+            for (let index = 0; index < card.length; index++) {
+                if (card[index][1] != type && type != 'all') {
+                    continue;
+                }
+                var html = `
+                        <div class="experience-card">
+                            <a href="" class="experience-card-img">
+                                <img src="/assets/card-`+card[index][0]+`.jpg" alt="">
+                            </a>
+                            <div class="experience-card-header">
+                                <h1>`+card[index][2]+`</h1>
+                            </div>
+                            <div class="experience-card-body">
+                                <h1>`+card[index][1]+`</h1>
+                                <p>`+card[index][3]+`</p>
+                                <a class="btn btn-outline-secondary btn-sm px-4 rounded-1">- MORE DETAIL -</a>
+                            </div>
+                        </div>`;
+                document.getElementsByClassName('experience-card-group')[0].innerHTML += html;
+            }
+            document.getElementById(type.replace('SINGHA ', '').toLowerCase()).classList.add('btn-experience-active');
+        };
+
+        order('all');
+    </script>
+</body>
+</html>
