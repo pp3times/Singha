@@ -14,13 +14,13 @@
 	- [ ] SINGHA MUSIC ([Jean])
 	- [ ] SINGHA FOOD ([Jean])
 	- [ ] SINGHA MUSIC ([Jean])
-- [ ] singha-story ([Jrm])
-	- [ ] ABOUT SINGHA ([Jrm])
+- [x] singha-story ([Jrm])
+	- [x] ABOUT SINGHA ([Jrm])
 	- [ ] HISTORICAL TIMELINE ([Jrm])
 	- [x] THAI BREW ([Pleng])
 	- [x] DOWNLOAD RESOURCES ([Pleng])
-	- [ ] ARCHIVES (VDO/GALLERY) ([Jrm]) *
-	- [ ] SINGHA AWARDS ([Jrm])
+	- [x] ARCHIVES (VDO/GALLERY) ([Jrm]) *
+	- [x] SINGHA AWARDS ([Jrm])
 - [ ] our-beer ([Jean])
 - [x] singha-reserve ([Pleng])
 - [ ] events ([Pleng])

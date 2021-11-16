@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/css/about-singha.css"> -->
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <title>Singha | The Original Thai Beer</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+        :root {
+            --yellow: #ffc107;
+            --white: #ffffff;
+            --gray: #eaeae9;
+        }
+
+        /* Fonts */
+        @font-face {
+            font-family: "korolev";
+            src: url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+            font-display: auto;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: "korolev";
+            src: url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+            font-display: auto;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: "korolev";
+            src: url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+            font-display: auto;
+            font-style: normal;
+            font-weight: 300;
+        }
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            font-family: "korolev", sans-serif !important;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--white);
+            overflow-x: hidden;
+            width: 100vw;
+        }
+
+        .c-nav {
+            position: fixed;
+            height: 6rem;
+            width: 100%;
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            z-index: 100000;
+        }
+
+        .c-nav>.c-nav-body {
+            padding: 0 25rem;
+            height: 2.5rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--yellow);
+        }
+
+        .c-nav-body>ul {
+            display: inline-flex;
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+            top: .5rem;
+        }
+
+        .c-nav-body>ul>li {
+            color: var(--white);
+            font-weight: bold;
+            padding: 0 1rem;
+            font-size: .75rem;
+
+        }
+
+        .c-nav-body>.c-nav-brand {
+            background-color: var(--white);
+            padding: .5rem;
+            width: 8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .c-nav-brand>img {
+            height: 4.5rem;
+        }
+
+        .c-footer {
+            background-color: var(--white);
+        }
+
+        .c-footer>div:nth-child(2) {
+            background-color: var(--yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .c-footer>div:nth-child(3) {
+            background-color: var(--gray);
+        }
+
+        .c-footer>div:nth-child(2) {
+            background-color: var(--yellow);
+        }
+
+        .c-footer>div:nth-child(1) {
+            text-align: center;
+            height: 3rem;
+        }
+
+        .c-footer>div:nth-child(1)>img {
+            height: 2.25rem;
+        }
+
+        .c-footer>div:nth-child(2)>ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            position: relative;
+            top: .5rem;
+        }
+
+        .c-footer>div:nth-child(2)>ul>li {
+            color: var(--white);
+            padding: 0 1rem;
+            font-weight: bold;
+            font-size: .75rem;
+        }
+
+        .c-footer>div:nth-child(2)>ul>li>a {
+            color: var(--white);
+        }
+
+        .c-footer>div:nth-child(2)>ul>li:not(:last-child) {
+            border-right: 1px solid var(--white);
+        }
+
+        .c-footer>div:nth-child(3) {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            padding: 1rem 25rem;
+        }
+
+        .c-footer>div:nth-child(3)>div>h1>a {
+            font-size: .80rem;
+            font-weight: bold;
+            color: #999;
+            border-bottom: 2px solid #999;
+            text-decoration: none;
+        }
+
+        .c-footer {
+            font-size: .80rem;
+        }
+
+        .c-footer a {
+            text-decoration: none;
+            color: #999;
+        }
+
+        .c-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .c-footer ul>li {
+            padding-top: .25rem;
+        }
+
+        .c-footer>div:nth-child(4) {
+            display: flex;
+            justify-content: space-between;
+            padding: .5rem 25rem;
+            background-color: var(--yellow);
+            color: var(--white);
+            font-size: .7rem;
+        }
+
+        .c-footer>div:nth-child(4) a {
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        @-webkit-keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fade-in-up {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 50%);
+                transform: translate(-50%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 50%);
+                transform: translate(-50%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @-webkit-keyframes fade-in-up-2 {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(0%, 50%);
+                transform: translate(0%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes fade-in-up-2 {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(0%, 50%);
+                transform: translate(0%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        #top-section {
+            max-width: 2000px;
+            margin: 0 auto;
+            background: #ffc522 url("../images/bg-02.jpg") center bottom no-repeat;
+        }
+
+        #top-section .page-headline {
+            position: relative;
+            padding-bottom: 10px;
+            color: #333;
+            line-height: 1.2em;
+            letter-spacing: 2px;
+        }
+
+        #top-section .page-headline h1 {
+            font-size: 50px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        #top-section .page-headline .headline-primary {
+            font-weight: 700;
+        }
+
+        #top-section .page-headline .headline-secondary {
+            font-weight: 400;
+        }
+
+        #top-section .page-headline .hr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 120px;
+            height: 4px;
+            background: #333;
+        }
+
+        #top-section .back-btn {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        #top-section .back-btn a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: auto;
+            color: #FFF;
+        }
+
+        #top-section .back-btn img {
+            vertical-align: middle;
+            height: 14px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #top-section .back-btn:hover img {
+            margin-right: 10px;
+        }
+
+        #know-more {
+            padding-top: 50px;
+            background: #f8f7f7;
+        }
+
+        #know-more .page-headline {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            color: #333;
+            line-height: 1.2em;
+            letter-spacing: 2px;
+            text-transform: uppercase
+        }
+
+        #know-more .page-headline h2 {
+            font-size: 50px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        #know-more .page-headline .headline-primary {
+            font-weight: 700;
+        }
+
+        #know-more .page-headline .headline-secondary {
+            font-weight: 400;
+        }
+
+        #know-more .page-headline .hr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 120px;
+            height: 4px;
+            background: #333;
+        }
+
+        #know-more .list .story-item {
+            display: block;
+            color: #333;
+        }
+
+        #know-more .list .story-item .story-img {
+            overflow: hidden;
+        }
+
+        #know-more .list .story-item .story-img img {
+            width: 100%;
+            -webkit-transition: 0.4s ease-in-out;
+            transition: 0.4s ease-in-out;
+        }
+
+        #know-more .list .story-item .story-info {
+            padding: 14px 20px;
+            background: #FFF;
+        }
+
+        #know-more .list .story-item .story-info .story-topic {
+            font-size: 20px;
+            text-transform: uppercase
+        }
+
+        #know-more .list .story-item .story-info .story-topic .strong {
+            font-weight: 700;
+            -webkit-transition: 0.4s ease-in-out;
+            transition: 0.4s ease-in-out;
+        }
+
+        #know-more .list .story-item .story-info .story-description {
+            margin-top: 10px;
+            min-height: 95px;
+            font-family: 'korolev', sans-serif;
+            font-size: 15px;
+            line-height: 1.6em;
+            color: #999;
+        }
+
+        #know-more .list .story-item .story-info .story-description.th {
+            font-family: "DB Heavent";
+            font-size: 20px;
+            line-height: 1.2em;
+        }
+
+        #know-more .list .story-item:hover .story-img img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        #know-more .list .story-item:hover .story-info .story-topic .strong {
+            color: #ffc522;
+        }
+
+        #know-more .action {
+            margin-top: 20px;
+            padding-bottom: 14px;
+        }
+
+        .modal {
+            background-color: #fff;
+        }
+
+        .modal-close {
+            cursor: pointer;
+            width: 21px;
+            position: absolute;
+            top: 30px;
+            right: 15px;
+            z-index: 1;
+        }
+
+        .modal-content {
+            border: none;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .modal .embed-responsive {
+            margin-top: 20px;
+        }
+
+
+        .modal-backdrop.show {
+            opacity: 0 !important;
+        }
+
+        /* Awards */
+
+        @-webkit-keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fade-in-up {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 50%);
+                transform: translate(-50%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 50%);
+                transform: translate(-50%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @-webkit-keyframes fade-in-up-2 {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(0%, 50%);
+                transform: translate(0%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes fade-in-up-2 {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(0%, 50%);
+                transform: translate(0%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        #singha-awards-top {
+            max-width: 2000px;
+            margin: 0 auto;
+            padding: 40px 0 88px;
+            background: #ffc522;
+        }
+
+        #singha-awards-top .page-headline {
+            position: relative;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            color: #333;
+            font-size: 50px;
+            line-height: 1.2em;
+            letter-spacing: 2px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #singha-awards-top .page-headline .headline-primary {
+            font-weight: 700;
+        }
+
+        #singha-awards-top .page-headline .headline-secondary {
+            font-weight: 400;
+        }
+
+        #singha-awards-top .page-headline .hr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 160px;
+            height: 4px;
+            background: #333;
+        }
+
+        #singha-awards-top .back-btn {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        #singha-awards-top .back-btn a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: auto;
+            color: #FFF;
+        }
+
+        #singha-awards-top .back-btn img {
+            vertical-align: middle;
+            height: 14px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #singha-awards-top .back-btn:hover img {
+            margin-right: 10px;
+        }
+
+        #singha-awards {
+            background: transparent url("../images/bg-02.jpg") center 20px no-repeat;
+            padding-bottom: 80px;
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+        }
+
+        #singha-awards .awards-box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 45px;
+        }
+
+        #singha-awards .awards-box .awards-image {
+            max-width: 230px;
+            margin-right: 35px;
+        }
+
+        #singha-awards .awards-box .detail-box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        #singha-awards .awards-box .detail-box .awards-header {
+            font-size: 24px;
+            text-transform: uppercase
+        }
+
+        #singha-awards .awards-box .detail-box .awards-details {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="c-nav">
+        <div class="c-nav-body">
+            <a href="/" class="c-nav-brand"><img src="/assets/logo.png"></a>
+            <ul>
+                <li>SINGHA STORY</li>
+                <li>OUR BEER</li>
+                <li>SINGHA RESERVE</li>
+                <li>UPCOMING EVENTS</li>
+                <li>SINGHA EXPRERIENCE</li>
+                <li>CONTACT US</li>
+            </ul>
+        </div>
+    </nav>
+    <div id="singha-awards-top">
+        <div class="container" style="margin-top: 10rem;">
+            <div class="page-headline" data-aos="fade-up">
+                <h1>
+                    <span class="headline-primary">SINGHA</span>
+                    <span class="headline-secondary">Awards</span>
+                </h1>
+                <div class="hr"></div>
+            </div>
+
+            <div class="back-btn" data-aos="fade-left" data-aos-delay="300">
+                <a href="https://singha.com/singha-story">
+                    <img src="https://singha.com/images/icon-arrow-back.png"> &nbsp;BACK
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="singha-awards">
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="awards-box" data-aos="fade-up" data-aos-delay="200">
+                            <img class="awards-image" src="https://singha.com/images/awards-01.png"
+                                alt="ISO 2000 Award">
+                            <div class="detail-box">
+                                <h2 class="awards-header">Earned ISO 2000</h2>
+                                <p class="awards-details">
+                                    certifying that the company maintains strict international quality standards
+                                    throughout
+                                    its business operation
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="awards-box" data-aos="fade-up" data-aos-delay="400">
+                            <img class="awards-image" src="https://singha.com/images/awards-02.png"
+                                alt="Gold Medal Award of Quality ">
+                            <div class="detail-box">
+                                <h2 class="awards-header">
+                                    Gold Medal Award of Quality
+                                </h2>
+                                <p class="awards-details">
+                                    (Belgium 1971)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="awards-box" data-aos="fade-up" data-aos-delay="200">
+                            <img class="awards-image" src="https://singha.com/images/awards-03.png"
+                                alt="American Tasting Institute Gold Taste Award">
+                            <div class="detail-box">
+                                <h2 class="awards-header">
+                                    American Tasting Institute Gold Taste
+                                </h2>
+                                <p class="awards-details">
+                                    (2000)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="awards-box" data-aos="fade-up" data-aos-delay="400">
+                            <img class="awards-image" src="https://singha.com/images/awards-04.png"
+                                alt="American Tasting Institute Gold Taste Award">
+                            <div class="detail-box">
+                                <h2 class="awards-header">
+                                    American Tasting Institute Gold Taste
+                                </h2>
+                                <p class="awards-details">
+                                    (2002)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="awards-box" data-aos="fade-up" data-aos-delay="200">
+                            <img class="awards-image" src="https://singha.com/images/awards-05.png"
+                                alt="Australian International Beer Award">
+                            <div class="detail-box">
+                                <h2 class="awards-header">
+                                    Australian International <span class="d-inline-block">Beer Awards</span> (AIBA)
+                                </h2>
+                                <p class="awards-details">
+                                    (Australia 2001 - Gold Medal)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="awards-box" data-aos="fade-up" data-aos-delay="400">
+                            <img class="awards-image" src="https://singha.com/images/awards-06.png"
+                                alt="International Tasting and Quality Institute Award">
+                            <div class="detail-box">
+                                <h2 class="awards-header">
+                                    International Tasting &amp; Quality institute (iTQi)
+                                </h2>
+                                <p class="awards-details">
+                                    (Brussels 2008)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="know-more">
+        <div class="container">
+            <div class="page-headline" data-aos="fade-up">
+                <h2>
+                    <div class="headline-primary">Know more about</div>
+                    <div class="headline-secondary">SINGHA Story</div>
+                </h2>
+                <div class="hr"></div>
+            </div>
+
+            <div class="row list">
+                <div class="col-12 col-md-4">
+                    <a href="https://singha.com/singha-story/about-singha" class="story-item" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="story-img">
+                            <img src="https://singha.com/images/story-09.jpg" alt="Singha Lion Logo About">
+                        </div>
+
+                        <div class="story-info">
+                            <div class="story-topic">
+                                <span class="strong">About</span> SINGHA
+                            </div>
+
+                            <div class="story-description en">
+                                Learn more about a story behind Singha’s Golden Mystical Lion that symbolizes the king
+                                of
+                                Himmapan Forest. </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="https://singha.com/singha-story/historical-timeline" class="story-item" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <div class="story-img">
+                            <img src="https://singha.com/images/story-07.jpg"
+                                alt="History of Thailand’s First Brewery">
+                        </div>
+
+                        <div class="story-info">
+                            <div class="story-topic">
+                                <span class="strong">Historical</span> Timeline
+                            </div>
+
+                            <div class="story-description en">
+                                Read through our historical timeline, from how we became Thailand’s first brewery up to
+                                our
+                                latest milestones. </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="https://singha.com/singha-story/thai-brew" class="story-item" data-aos="fade-up"
+                        data-aos-delay="600">
+                        <div class="story-img">
+                            <img src="https://singha.com/images/story-08.jpg" alt="Premium Thai Beer">
+                        </div>
+
+                        <div class="story-info">
+                            <div class="story-topic">
+                                <span class="strong">Our</span> Brew
+                            </div>
+
+                            <div class="story-description en">
+                                Our signature taste comes from premium ingredient selection and world-standard brewing
+                                process. </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="c-footer" style="margin-top: 0rem;">
+        <div style="z-index: 1000;">
+            <a href="#top"><img src="/assets/back-to-top-btn.png" alt="" style="cursor: pointer; height: 2.25rem;"></a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="">BOONRAWD.CO.TH</a></li>
+                <li><a href="">SINGHA ONLINE SHOP</a></li>
+                <li><a href="">FB</a></li>
+                <li><a href="">YT</a></li>
+                <li><a href="">IG</a></li>
+            </ul>
+        </div>
+        <div class="c-footer-body">
+            <div>
+                <h1><a href="">HOME</a></h1>
+            </div>
+            <div>
+                <h1><a href="">SINGHA STORY</a></h1>
+                <ul>
+                    <li><a href="">ABOUT SINGHA</a></li>
+                    <li><a href="">HISTORICAL TIMELINE</a></li>
+                    <li><a href="">OUR BREW</a></li>
+                    <li><a href="">DOWNLOAD RESOURCES</a></li>
+                    <li><a href="">ARCHIVE</a></li>
+                    <li><a href="">SINGHA AWARDS</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1><a href="">OUR BEER</a></h1>
+                <ul>
+                    <li><a href="">CAN (320 ml.)</a></li>
+                    <li><a href="">BOTTLE (320 ml.)</a></li>
+                    <li><a href="">BOTTLE (620 ml.)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1><a href="">UPCOMING EVENTS</a></h1>
+            </div>
+            <div>
+                <h1><a href="">SINGHA EXPRERIENCE</a></h1>
+            </div>
+            <div>
+                <h1><a href="">CONTACT US</a></h1>
+            </div>
+        </div>
+        <div>
+            <a href="">TERMS & CONDITIONS</a>
+            <p class="mb-0">© COPYRIGHTS 2018 SINGHA CORPORATION CO., LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

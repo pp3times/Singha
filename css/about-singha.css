@@ -246,92 +246,92 @@ body {
     padding: 40px 0 1050px;
 }
 
-#content {
+.content {
     margin-top: -1050px;
 }
 
-#content .container {
+.content .container {
     position: relative;
     min-height: 1700px;
 }
 
-#content #bottle {
+.content #bottle {
     margin-left: -270px;
 }
 
-#content #about-garuda {
+.content #info {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 1;
 }
 
-#content #about-garuda .pointer .vline {
+.content #info .pointer .vline {
     height: 275px;
 }
 
-#content #about-garuda .pointer .hline {
+.content #info .pointer .hline {
     width: 302px;
 }
 
-#content #about-garuda .pointer .point {
+.content #info .pointer .point {
     margin-left: -300px;
 }
 
-#content #about-garuda .topic .topic-secondary {
+.content #info .topic .topic-secondary {
     color: #333;
 }
 
-#content #about-mystical-lion {
+.content #about-mystical-lion {
     position: absolute;
     bottom: 100px;
     right: 0;
 }
 
-#content #about-mystical-lion .pointer .vline {
+.content #about-mystical-lion .pointer .vline {
     height: 190px;
 }
 
-#content #about-mystical-lion .pointer .hline {
+.content #about-mystical-lion .pointer .hline {
     width: 220px;
 }
 
-#content #about-mystical-lion .pointer .point {
+.content #about-mystical-lion .pointer .point {
     margin-left: -220px;
 }
 
-#content #about-mystical-lion .topic .topic-primary {
+.content #about-mystical-lion .topic .topic-primary {
     color: #ffc522;
 }
 
-#content #about-mystical-lion .topic .topic-secondary {
+.content #about-mystical-lion .topic .topic-secondary {
     color: #333;
 }
 
-#content #about-mystical-lion .description {
+.content #about-mystical-lion .description {
     padding-bottom: 200px;
 }
 
-#content #about-mystical-lion .description.th {
+.content #about-mystical-lion .description.th {
     padding-bottom: 100px;
 }
 
-#content .content-block {
+.content .box {
     width: 450px;
 }
 
-#content .content-block .pointer {
+.content .box .pointer {
     position: absolute;
     top: 20px;
     left: -20px;
 }
 
-#content .content-block .pointer .vline {
+.content .box .pointer .vline {
     width: 1px;
     background: #333;
 }
 
-#content .content-block .pointer .hline {
+.content .box .pointer .hline {
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -341,7 +341,7 @@ body {
     background: #333;
 }
 
-#content .content-block .pointer .point {
+.content .box .pointer .point {
     position: absolute;
     bottom: 10px;
     -webkit-transform: translate(15px, 50%);
@@ -352,7 +352,7 @@ body {
     border-radius: 50%;
 }
 
-#content .content-block .topic {
+.content .box .topic {
     font-size: 58px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -360,269 +360,25 @@ body {
     color: #FFF;
 }
 
-#content .content-block .topic .topic-primary {
+.content .box .topic .topic-primary {
     font-weight: 700;
 }
 
-#content .content-block .topic .topic-secondary {
+.content .box .topic .topic-secondary {
     font-weight: 400;
 }
 
-#content .content-block .description {
+.content .box .description {
     margin: 20px 0;
     font-size: 15px;
     line-height: 1.7em;
 }
 
-#content .content-block .description.th {
+.content .box .description.th {
     font-family: "DB Heavent";
     font-size: 24px;
     line-height: 1.3em;
 }
-
-@media only screen and (max-width: 1199px) {
-    #content .container {
-        min-height: 1540px;
-    }
-    #content #bottle {
-        width: 1000px;
-    }
-    #content .content-block {
-        width: 420px;
-    }
-    #content .content-block .description.th {
-        font-size: 20px !important;
-        line-height: 1.2em;
-    }
-    #content #about-garuda .pointer .vline {
-        height: 250px;
-    }
-    #content #about-garuda .pointer .hline {
-        width: 220px;
-    }
-    #content #about-garuda .pointer .point {
-        margin-left: -220px;
-    }
-    #content #about-mystical-lion {
-        padding-bottom: 0;
-        bottom: 50px;
-    }
-    #content #about-mystical-lion .pointer .vline {
-        height: 180px;
-    }
-    #content #about-mystical-lion .pointer .hline {
-        width: 150px;
-    }
-    #content #about-mystical-lion .pointer .point {
-        margin-left: -150px;
-    }
-    #content #about-mystical-lion .description.th {
-        padding-bottom: 150px;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    #top-section {
-        padding-bottom: 600px;
-    }
-    #content {
-        margin-top: -750px;
-    }
-    #content .container {
-        padding-top: 150px;
-        min-height: 859px;
-    }
-    #content #bottle-mobile {
-        max-width: 100%;
-    }
-    #content .content-block {
-        width: 420px;
-    }
-    #content .content-block .pointer {
-        top: 10px;
-    }
-    #content .content-block .pointer .point {
-        width: 12px;
-        height: 12px;
-    }
-    #content .content-block .topic {
-        font-size: 24px;
-    }
-    #content .content-block .description {
-        margin-top: 10px;
-        font-size: 14px;
-        line-height: 1.5em;
-    }
-    #content .content-block .description.th {
-        font-size: 20px !important;
-    }
-    #content #about-garuda {
-        margin-top: 50px;
-    }
-    #content #about-garuda .pointer .vline {
-        height: 230px;
-    }
-    #content #about-garuda .pointer .hline {
-        width: 110px;
-    }
-    #content #about-garuda .pointer .point {
-        margin-left: -110px;
-    }
-    #content #about-garuda.th {
-        margin-top: 0;
-    }
-    #content #about-garuda.th .pointer .vline {
-        height: 280px;
-    }
-    #content #about-mystical-lion {
-        bottom: 0px;
-    }
-    #content #about-mystical-lion .pointer .vline {
-        height: 120px;
-    }
-    #content #about-mystical-lion .pointer .hline {
-        width: 70px;
-    }
-    #content #about-mystical-lion .pointer .point {
-        margin-left: -70px;
-    }
-    #content #about-mystical-lion .description {
-        padding-bottom: 170px;
-    }
-    #content #about-mystical-lion .description.th {
-        padding-bottom: 100px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    #top-section {
-        padding-bottom: 1000px;
-    }
-    #content {
-        margin-top: -980px;
-    }
-    #content .container {
-        padding-top: 0;
-        min-height: 1340px;
-    }
-    #content .content-block {
-        position: relative !important;
-        width: 470px !important;
-        margin: 0 auto;
-    }
-    #content .content-block .pointer .point {
-        width: 10px;
-        height: 10px;
-    }
-    #content #bottle-mobile {
-        margin: 0 auto;
-    }
-    #content #about-garuda {
-        margin-top: 0;
-    }
-    #content #about-garuda .pointer .vline {
-        height: 390px;
-    }
-    #content #about-garuda .pointer .hline {
-        -webkit-transform: none;
-        transform: none;
-        left: -10px;
-        width: 233px;
-    }
-    #content #about-garuda .pointer .point {
-        margin-left: 200px;
-        -webkit-transform: translate(50%, 50%);
-        transform: translate(50%, 50%);
-    }
-    #content #about-garuda .pointer.th .vline {
-        height: 490px;
-    }
-    #content #about-mystical-lion {
-        margin-top: 0;
-        bottom: 0;
-    }
-    #content #about-mystical-lion .pointer {
-        top: -330px;
-    }
-    #content #about-mystical-lion .pointer .vline {
-        height: 410px;
-    }
-    #content #about-mystical-lion .pointer .hline {
-        top: 10px;
-        bottom: inherit;
-        left: -10px;
-        -webkit-transform: none;
-        transform: none;
-        width: 205px;
-    }
-    #content #about-mystical-lion .pointer .point {
-        top: 6px;
-        bottom: inherit;
-        margin-left: 176px;
-        -webkit-transform: none;
-        transform: none;
-    }
-    #content #about-mystical-lion .description {
-        padding-bottom: 0;
-    }
-    #content #about-mystical-lion .description.th {
-        padding-bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 575px) {
-    #top-section {
-        padding-top: 20px;
-    }
-    #content .container {
-        overflow: hidden;
-        min-height: 1530px;
-    }
-    #content .container.th {
-        min-height: 1430px;
-    }
-    #content .content-block {
-        width: 100% !important;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        padding-left: 15px;
-    }
-    #content .content-block .pointer {
-        left: 0;
-        width: 100%;
-    }
-    #content #about-garuda {
-        height: 400px;
-    }
-    #content #about-garuda .pointer .vline {
-        height: 530px;
-    }
-    #content #about-garuda .pointer .hline {
-        width: 44%;
-    }
-    #content #about-garuda .pointer .point {
-        margin-left: 36%;
-    }
-    #content #about-garuda .pointer.th .vline {
-        height: 630px;
-    }
-    #content #about-garuda.th {
-        height: 520px;
-    }
-    #content #about-garuda.th .pointer.th .vline {
-        height: 650px;
-    }
-    #content #about-mystical-lion .pointer .hline {
-        width: 38%;
-    }
-    #content #about-mystical-lion .pointer .point {
-        margin-left: 31%;
-    }
-    #content #about-mystical-lion .description.th {
-        padding-bottom: 0;
-    }
-}
-
 
 #top-section {
     max-width: 2000px;
@@ -789,87 +545,8 @@ body {
     padding-bottom: 14px;
 }
 
-@media only screen and (max-width: 1199px) {
-    #know-more .list .story-item .story-info .story-description {
-        min-height: 75px;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    #know-more .list .story-item .story-topic .strong {
-        display: block;
-    }
-    #know-more .list .story-item .story-info .story-description {
-        min-height: 100px;
-        font-size: 14px;
-    }
-    footer {
-        margin-top: 0 !important;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    #top-section .container {
-        position: relative;
-    }
-    #top-section .back-btn {
-        position: absolute;
-        top: 0;
-        right: 15px;
-    }
-    #know-more {
-        padding-top: 20px;
-    }
-    #know-more .page-headline {
-        font-size: 32px;
-    }
-    #know-more .list .story-item {
-        margin-bottom: 30px;
-    }
-    #know-more .list .story-item .story-topic {
-        line-height: 1.2em;
-    }
-    #know-more .list .story-item .story-topic .strong {
-        display: inline-block;
-    }
-    #know-more .list .story-item .story-info .story-description {
-        min-height: inherit;
-    }
-    #know-more .action {
-        margin-top: 0px;
-    }
-}
-
-@media only screen and (max-width: 575px) {
-    #top-section {
-        padding-top: 20px !important;
-    }
-    #top-section .page-headline h1 {
-        font-size: 32px;
-    }
-    #top-section .back-btn {
-        margin-top: 2px;
-        font-size: 18px;
-    }
-    #top-section .back-btn img {
-        height: 12px;
-    }
-}
-
 .modal {
     background-color: #fff;
-}
-
-@media (min-width: 768px) {
-    .modal-dialog {
-        max-width: none;
-    }
-}
-
-@media (min-width: 992px) {
-    .modal-dialog {
-        max-width: 900px;
-    }
 }
 
 .modal-close {
@@ -881,28 +558,6 @@ body {
     z-index: 1;
 }
 
-@media (min-width: 375px) {
-    .modal-close {
-        top: 20px;
-        right: 15px;
-    }
-}
-
-@media (min-width: 768px) {
-    .modal-close {
-        width: 37px;
-        top: 30px;
-        right: 51px;
-    }
-}
-
-@media (min-width: 992px) {
-    .modal-close {
-        width: 21px;
-        right: 0;
-    }
-}
-
 .modal-content {
     border: none;
 }
@@ -912,56 +567,8 @@ body {
     margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
-    .modal-header {
-        padding-left: 43px;
-        padding-right: 43px;
-        margin-bottom: 20px;
-    }
-}
-
-@media (min-width: 992px) {
-    .modal-header {
-        padding-left: 16px;
-        padding-right: 16px;
-        margin-bottom: 35px;
-    }
-}
-
-@media (min-width: 768px) {
-    .modal-body {
-        padding-left: 43px;
-        padding-right: 43px;
-    }
-}
-
-@media (min-width: 992px) {
-    .modal-body {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-
 .modal .embed-responsive {
     margin-top: 20px;
-}
-
-@media (min-width: 375px) {
-    .modal .embed-responsive {
-        margin-top: 25px;
-    }
-}
-
-@media (min-width: 768px) {
-    .modal .embed-responsive {
-        margin-top: 40px;
-    }
-}
-
-@media (min-width: 992px) {
-    .modal .embed-responsive {
-        margin-top: 0;
-    }
 }
 
 .modal-backdrop.show {
