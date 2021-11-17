@@ -1,0 +1,2551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <title>Singha | The Original Thai Beer</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --yellow: #ffc107;
+            --white: #ffffff;
+            --gray: #eaeae9;
+        }
+
+        /* Fonts */
+        @font-face {
+            font-family: "korolev";
+            src: url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/cd98f3/00000000000000003b9b1a1c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+            font-display: auto;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: "korolev";
+            src: url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/d575c3/00000000000000003b9b1a22/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+            font-display: auto;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: "korolev";
+            src: url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/cf0a65/00000000000000003b9b1a20/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+            font-display: auto;
+            font-style: normal;
+            font-weight: 300;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            font-family: "korolev", sans-serif !important;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--yellow);
+            overflow-x: hidden;
+        }
+
+        .c-nav {
+            position: fixed;
+            height: 6rem;
+            width: 100%;
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            z-index: 10000000;
+        }
+
+        .c-nav>.c-nav-body {
+            padding: 0 25rem;
+            height: 2.5rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--yellow);
+        }
+
+        .c-nav-body>ul {
+            display: inline-flex;
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+            top: .5rem;
+        }
+
+        .c-nav-body>ul>li>a {
+            color: var(--white);
+            font-weight: bold;
+            padding: 0 1rem;
+            font-size: .75rem;
+            text-decoration: none;
+            transition: 200ms;
+        }
+
+        .c-nav-body>ul>li>a:hover {
+            color: hsl(0, 0%, 20%);
+        }
+
+        .c-nav-body>.c-nav-brand {
+            background-color: var(--white);
+            padding: .5rem;
+            width: 8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .c-nav-brand>img {
+            height: 4.5rem;
+        }
+
+        .c-footer {
+            background-color: var(--white);
+        }
+
+        .c-footer>div:nth-child(2) {
+            background-color: var(--yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .c-footer>div:nth-child(3) {
+            background-color: var(--gray);
+        }
+
+        .c-footer>div:nth-child(2) {
+            background-color: var(--yellow);
+        }
+
+        .c-footer>div:nth-child(1) {
+            text-align: center;
+            height: 3rem;
+        }
+
+        .c-footer>div:nth-child(1)>img {
+            height: 2.25rem;
+        }
+
+        .c-footer>div:nth-child(2)>ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            position: relative;
+            top: .5rem;
+        }
+
+        .c-footer>div:nth-child(2)>ul>li {
+            color: var(--white);
+            padding: 0 1rem;
+            font-weight: bold;
+            font-size: .75rem;
+        }
+
+        .c-footer>div:nth-child(2)>ul>li>a {
+            color: var(--white);
+        }
+
+        .c-footer>div:nth-child(2)>ul>li:not(:last-child) {
+            border-right: 1px solid var(--white);
+        }
+
+        .c-footer>div:nth-child(3) {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            padding: 1rem 25rem;
+        }
+
+        .c-footer>div:nth-child(3)>div>h1>a {
+            font-size: .80rem;
+            font-weight: bold;
+            color: #999;
+            border-bottom: 2px solid #999;
+            text-decoration: none;
+        }
+
+        .c-footer {
+            font-size: .80rem;
+        }
+
+        .c-footer a {
+            text-decoration: none;
+            color: #999;
+        }
+
+        .c-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .c-footer ul>li {
+            padding-top: .25rem;
+        }
+
+        .c-footer>div:nth-child(4) {
+            display: flex;
+            justify-content: space-between;
+            padding: .5rem 25rem;
+            background-color: var(--yellow);
+            color: var(--white);
+            font-size: .7rem;
+        }
+
+        .c-footer>div:nth-child(4) a {
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .content {
+            padding-top: 6rem;
+        }
+
+        .form-control,
+        .form-select,
+        .btn {
+            border-radius: 0;
+        }
+
+        .form-control:focus,
+        .form-select:focus,
+        .btn:focus {
+            box-shadow: none;
+            border-color: var(--yellow);
+        }
+
+        .contact {
+            padding: 4rem 25rem;
+            position: relative;
+            height: 1000px;
+            overflow: hidden;
+        }
+
+        .contact-bg-yellow {
+            background-color: #ffffff;
+            height: 27rem;
+            width: 2000px;
+            position: absolute;
+            top: -6rem;
+            left: -6.5rem;
+            z-index: -100;
+            transform: rotate(-15deg);
+        }
+
+        .singha-experience {
+            padding: 4rem 25rem;
+            position: relative;
+            overflow: hidden;
+            background-color: #ffffff;
+            z-index: 1;
+        }
+
+        .singha-experience-bg-yellow {
+            background-color: var(--yellow);
+            height: 50rem;
+            width: 2200px;
+            position: absolute;
+            top: -16rem;
+            left: -10rem;
+            z-index: 0;
+            transform: rotate(-15deg);
+        }
+
+        .btn:focus {
+            box-shadow: none;
+            outline: none !important;
+        }
+
+        .btn-experience,
+        .btn-primary {
+            border: none !important;
+            background: linear-gradient(to bottom, #e9e9e9 0%, #d2d2d2 100%);
+            padding: .75rem 1.5rem;
+            color: #5e5e5e;
+            font-size: .75rem;
+            font-weight: bold;
+        }
+
+        .btn-experience:hover,
+        .btn-primary:hover {
+            background: linear-gradient(to bottom, #e9e9e9 0%, #b8b8b8 100%);
+        }
+
+        .btn-experience-active,
+        .btn-experience-active:hover,
+        .btn-check:active+.btn-primary,
+        .btn-check:checked+.btn-primary,
+        .btn-primary.active,
+        .btn-primary:active,
+        .show>.btn-primary.dropdown-toggle {
+            background: linear-gradient(to bottom, #ffc107 0%, #e3aa00 100%);
+            color: #ffffff;
+        }
+
+        .experience-card-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .experience-card {
+            background: #eeeeee;
+        }
+
+        .experience-card-img {
+            overflow: hidden;
+            display: block;
+        }
+
+        .experience-card-img>img {
+            width: 100%;
+            transition: 300ms;
+        }
+
+        .experience-card-img>img:hover {
+            transform: scale(1.1);
+        }
+
+        .experience-card-header {
+            border-bottom: 1px solid #dddddd;
+            padding: 1.5rem .5rem;
+        }
+
+        .experience-card-header>h1 {
+            font-size: .85rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .experience-card-body {
+            padding: 1.5rem 1rem;
+            color: #6c757d;
+        }
+
+        .experience-card-body>h1 {
+            font-size: .75rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .experience-card-body>p {
+            font-size: .75rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .back-arrow {
+            text-align: start;
+            color: #ffffff;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .back-arrow:hover {
+            color: #ffffff;
+        }
+
+        .back-arrow>div>img {
+            transition: 200ms;
+        }
+
+        .back-arrow:hover>div>img {
+            padding-right: 1rem;
+            transition: 200ms;
+        }
+
+        .recommended-section {
+            width: 100%;
+            background-color: var(--gray);
+            padding: 4rem 25rem;
+        }
+
+        .singha-index {
+            padding: 0rem 17rem;
+            position: relative;
+            overflow: hidden;
+            background-color: #ffffff;
+            z-index: 1;
+        }
+
+        .singha-index-bg-yellow {
+            background-color: var(--yellow);
+            height: 95rem;
+            width: 3000px;
+            position: absolute;
+            top: 13rem;
+            left: -15rem;
+            z-index: 0;
+            transform: rotate(-15deg);
+        }
+
+        .singha-index-bg-low-yellow {
+            background-color: var(--yellow);
+            height: 50rem;
+            width: 3000px;
+            position: absolute;
+            bottom: -0rem;
+            left: 35rem;
+            z-index: 0;
+            transform: rotate(-15deg);
+        }
+
+        .singha-index-bg-low-white {
+            background-color: var(--white);
+            height: 5rem;
+            width: 3000px;
+            position: absolute;
+            bottom: -0rem;
+            left: 0;
+            z-index: 0;
+        }
+
+        .index-img {
+            position: relative;
+            /* max-width: 470px; */
+            overflow: hidden;
+            display: block;
+        }
+
+        .index-img>img {
+            width: 100%;
+            transition: 250ms;
+        }
+
+        .index-img>img:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .index-img:hover>img:nth-child(1) {
+            transform: scale(1.1);
+        }
+
+        .back-to-top {
+            position: relative;
+            z-index: 5;
+            transition: 140ms;
+            cursor: pointer;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-.5rem);
+        }
+
+        #know-more {
+            padding-top: 50px;
+            background: #f8f7f7;
+        }
+
+        #know-more .page-headline {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            color: #333;
+            line-height: 1.2em;
+            letter-spacing: 2px;
+            text-transform: uppercase
+        }
+
+        #know-more .page-headline h2 {
+            font-size: 50px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        #know-more .page-headline .headline-primary {
+            font-weight: 700;
+        }
+
+        #know-more .page-headline .headline-secondary {
+            font-weight: 400;
+        }
+
+        #know-more .page-headline .hr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 120px;
+            height: 4px;
+            background: #333;
+        }
+
+        #know-more .list .story-item {
+            display: block;
+            color: #333;
+        }
+
+        #know-more .list .story-item .story-img {
+            overflow: hidden;
+        }
+
+        #know-more .list .story-item .story-img img {
+            width: 100%;
+            -webkit-transition: 0.4s ease-in-out;
+            transition: 0.4s ease-in-out;
+        }
+
+        #know-more .list .story-item .story-info {
+            padding: 14px 20px;
+            background: #FFF;
+        }
+
+        #know-more .list .story-item .story-info .story-topic {
+            font-size: 20px;
+            text-transform: uppercase
+        }
+
+        #know-more .list .story-item .story-info .story-topic .strong {
+            font-weight: 700;
+            -webkit-transition: 0.4s ease-in-out;
+            transition: 0.4s ease-in-out;
+        }
+
+        #know-more .list .story-item .story-info .story-description {
+            margin-top: 10px;
+            min-height: 95px;
+            font-family: 'korolev', sans-serif;
+            font-size: 15px;
+            line-height: 1.6em;
+            color: #999;
+        }
+
+        #know-more .list .story-item .story-info .story-description.th {
+            font-family: "DB Heavent";
+            font-size: 20px;
+            line-height: 1.2em;
+        }
+
+        #know-more .list .story-item:hover .story-img img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        #know-more .list .story-item:hover .story-info .story-topic .strong {
+            color: #ffc522;
+        }
+
+        #know-more .action {
+            margin-top: 20px;
+            padding-bottom: 14px;
+        }
+
+        @-webkit-keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fade-in-up {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 50%);
+                transform: translate(-50%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 50%);
+                transform: translate(-50%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @-webkit-keyframes fade-in-up-2 {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(0%, 50%);
+                transform: translate(0%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes fade-in-up-2 {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(0%, 50%);
+                transform: translate(0%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        header.small-header {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        #top-section {
+            padding: 40px 0 600px;
+        }
+
+        #top-section .container {
+            position: relative;
+            z-index: 1000;
+        }
+
+        #top-section .page-headline h1 {
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            text-transform: uppercase;
+        }
+
+        #top-section .navigation {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: calc(100% - 30px);
+            height: 130px;
+            border-bottom: 1px solid #333;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #top-section .navigation .nav-block {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 825px;
+            height: 100%;
+            border-left: 1px solid #333;
+        }
+
+        #top-section .navigation .nav-block .nav-content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+
+        #top-section .navigation .nav-block .nav-content .hline {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: calc(100% - 100px);
+            height: 3px;
+            background: #FFF;
+        }
+
+        #top-section .navigation .nav-block .nav-item {
+            margin: 0 12px;
+            -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #top-section .navigation .nav-block .nav-item .hop {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 3px solid #FFF;
+            background: #ffc522;
+        }
+
+        #top-section .navigation .nav-block .nav-item .year {
+            line-height: 1.4em;
+            letter-spacing: 1.5px;
+            color: #FFF;
+        }
+
+        #top-section .navigation .nav-block .nav-item .year .year-be {
+            display: none;
+            font-size: 14px;
+        }
+
+        #top-section .navigation .nav-block .nav-item .year .year-ad {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #top-section .navigation .nav-block .nav-item.highlight .hop {
+            background: #FFF;
+        }
+
+        #top-section .navigation .nav-block .nav-item.active .hop {
+            position: relative;
+            width: 36px;
+            height: 36px;
+            margin-bottom: 18px;
+            background: none;
+            border: 1px dotted #333;
+        }
+
+        #top-section .navigation .nav-block .nav-item.active .hop:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: #333;
+            border-radius: 50%;
+        }
+
+        #top-section .navigation .nav-block .nav-item.active .year {
+            position: absolute;
+            top: -36px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            color: #333;
+            text-align: left;
+        }
+
+        #top-section .navigation .nav-block .nav-item.active .year .year-be {
+            display: none;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        #top-section .navigation .nav-block .nav-item.active .year .year-ad {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        #top-section .navigation .nav-block .nav-item.active:after {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            width: 1px;
+            height: 16px;
+            border-left: 1px dotted #333;
+        }
+
+        #top-section.fixed {
+            position: fixed;
+            top: 50px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 100%;
+            height: 150px;
+            padding-bottom: 40px;
+            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            background: #ffc522;
+            z-index: 500;
+        }
+
+        #top-section.fixed .page-headline h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        #top-section.fixed .navigation {
+            height: 66px;
+        }
+
+        #top-section.fixed .navigation .nav-block {
+            width: calc(100% - 150px);
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content {
+            top: 35%;
+            width: 100%;
+            padding: 10px;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .hline {
+            top: 44%;
+            width: calc(100% - 330px);
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item {
+            -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item .hop {
+            width: 16px;
+            height: 16px;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item .year .year-be {
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item .year .year-ad {
+            font-size: 11px;
+            line-height: 11px;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .hop {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 0;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .hop:before {
+            width: 16px;
+            height: 16px;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .year {
+            position: relative;
+            top: -2px;
+            width: auto;
+            text-align: center;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .year .year-be,
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .year .year-ad {
+            display: block;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .year .year-be {
+            display: none;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active .year .year-ad:before {
+            display: none;
+        }
+
+        #top-section.fixed .navigation .nav-block .nav-content .nav-item.active:after {
+            display: none;
+        }
+
+        #top-section.fixed .back-btn {
+            -webkit-transform-origin: top left;
+            transform-origin: top left;
+            -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+        }
+
+        #content {
+            position: relative;
+            margin-top: -643px;
+        }
+
+        #content .main-line {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            width: 1px;
+            height: 95%;
+            background: #333;
+        }
+
+        #content .sub-line {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+            width: 1px;
+            height: 91.17%;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        #content .historical-item .historical-img {
+            position: relative;
+        }
+
+        #content .historical-item .historical-img img {
+            max-width: 120%;
+        }
+
+        #content .historical-item .historical-img:after {
+            position: absolute;
+            top: -250px;
+            right: 135px;
+            width: 1px;
+            height: 830px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        #content .historical-item .historical-year {
+            position: relative;
+            margin-top: -40px;
+            line-height: 80px;
+        }
+
+        #content .historical-item .historical-year h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        #content .historical-item .historical-year .year-ad {
+            font-size: 100px;
+            font-weight: 700;
+            color: #333;
+            letter-spacing: 8px;
+            line-height: 80px;
+        }
+
+        #content .historical-item .historical-year .year-be {
+            font-size: 60px;
+            color: #ffc522;
+            letter-spacing: 5px;
+            line-height: 80px;
+        }
+
+        #content .historical-item .historical-year .pointer {
+            position: absolute;
+            top: 62px;
+            right: 0;
+            -webkit-transform: translateX(58.5%);
+            transform: translateX(58.5%);
+        }
+
+        #content .historical-item .historical-year .pointer .hline {
+            width: 180px;
+            height: 1px;
+            background: #333;
+        }
+
+        #content .historical-item .historical-year .pointer .point {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            background: #333;
+            border-radius: 50%;
+        }
+
+        #content .historical-item .historical-text {
+            margin: 20px 0;
+            font-family: korolev, sans-serif;
+            font-size: 15px;
+            line-height: 1.8em;
+            color: #666;
+        }
+
+        #content .historical-item .historical-text .highlight {
+            color: #FFF;
+        }
+
+        #content .historical-item .historical-text.th {
+            font-family: "DB Heavent";
+            font-size: 21px;
+            line-height: 1.2em;
+        }
+
+        #content .historical-item.item-left {
+            text-align: right;
+        }
+
+        #content .historical-item.item-left .historical-year,
+        #content .historical-item.item-left .historical-text {
+            padding-right: 60px;
+        }
+
+        #content .historical-item.item-right {
+            text-align: left;
+        }
+
+        #content .historical-item.item-right .historical-img {
+            margin-left: -30px;
+        }
+
+        #content .historical-item.item-right .historical-year,
+        #content .historical-item.item-right .historical-text {
+            padding-left: 100px;
+        }
+
+        #content .historical-item.item-right .historical-year .pointer {
+            right: inherit;
+            left: 0;
+            -webkit-transform: translateX(-33%);
+            transform: translateX(-33%);
+        }
+
+        #content .historical-item.item-right .historical-year .pointer .hline {
+            width: 180px;
+        }
+
+        #content .historical-item.item-right .historical-year .pointer .point {
+            left: 45px;
+        }
+
+        #content #historical-1910 {
+            position: relative;
+            margin-top: 100px;
+            z-index: 100;
+        }
+
+        #content #historical-1929 {
+            margin-top: -208px;
+        }
+
+        #content #historical-1929 .historical-img:after {
+            content: '';
+            top: -250px;
+            height: 830px;
+        }
+
+        #content #historical-1929 .historical-year .year-ad {
+            color: #ffc522;
+        }
+
+        #content #historical-1929 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-1929 .historical-year .pointer .hline,
+        #content #historical-1929 .historical-year .pointer .point {
+            background: #ffc522;
+        }
+
+        #content #historical-1929.th {
+            margin-top: -350px;
+        }
+
+        #content #historical-1933 {
+            margin: 20px auto 0;
+            padding-bottom: 300px;
+            max-width: 2000px;
+            background-color: #ffc522;
+            background-image: url("../images/bg-01.jpg"), url("../images/bg-02.jpg");
+            background-position: center top, center bottom;
+            background-repeat: no-repeat;
+        }
+
+        #content #historical-1933 .historical-img img {
+            margin-left: 80px;
+        }
+
+        #content #historical-1933 .historical-year {
+            margin-top: -120px;
+        }
+
+        #content #historical-1933 .historical-year .year-ad {
+            color: #FFF;
+        }
+
+        #content #historical-1933 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-1933 .historical-year .pointer .hline,
+        #content #historical-1933 .historical-year .pointer .point {
+            background: #FFF;
+        }
+
+        #content #historical-1933 .historical-text {
+            color: #333;
+        }
+
+        #content #historical-1955 {
+            margin-top: -560px;
+        }
+
+        #content #historical-1955 .historical-img:before {
+            content: '';
+            position: absolute;
+            top: -915px;
+            right: 135px;
+            width: 1px;
+            height: 870px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        #content #historical-1955 .historical-img:after {
+            content: '';
+            top: 120px;
+            height: 950px;
+        }
+
+        #content #historical-1955 .historical-year .year-ad {
+            color: #ffc522;
+        }
+
+        #content #historical-1955 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-1955 .historical-year .pointer .hline,
+        #content #historical-1955 .historical-year .pointer .point {
+            background: #ffc522;
+        }
+
+        #content #historical-1955.th {
+            margin-top: -600px;
+        }
+
+        #content #historical-1967 {
+            max-width: 2000px;
+            margin: -370px auto 0;
+            padding-bottom: 270px;
+            background: url("../images/bg-01.jpg") center bottom no-repeat;
+        }
+
+        #content #historical-1967 .historical-img img {
+            margin-left: 80px;
+        }
+
+        #content #historical-1967 .historical-year {
+            margin-top: -110px;
+        }
+
+        #content #historical-1967 .historical-year .year-ad {
+            color: #ffc522;
+        }
+
+        #content #historical-1967 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-1967 .historical-year .pointer .hline,
+        #content #historical-1967 .historical-year .pointer .point {
+            background: #ffc522;
+        }
+
+        #content #historical-1967 .historical-year .pointer .hline {
+            width: 215px;
+        }
+
+        #content #historical-1967.th {
+            margin-top: -220px;
+        }
+
+        #content #historical-1970 .container {
+            margin-top: -492px;
+        }
+
+        #content #historical-1970 .historical-year .year-ad {
+            color: #FFF;
+        }
+
+        #content #historical-1970 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-1970 .historical-year .pointer .hline,
+        #content #historical-1970 .historical-year .pointer .point {
+            background: #FFF;
+        }
+
+        #content #historical-1970 .historical-text {
+            color: #333;
+        }
+
+        #content #historical-1970.th .container {
+            margin-top: -620px;
+        }
+
+        #content #historical-1988 {
+            max-width: 2000px;
+            margin: -447px auto 0;
+            background: #ffc522;
+        }
+
+        #content #historical-1988 .container {
+            padding-top: 112px;
+        }
+
+        #content #historical-1988 .historical-img {
+            margin-top: -90px;
+        }
+
+        #content #historical-1988 .historical-year .year-ad {
+            color: #FFF;
+        }
+
+        #content #historical-1988 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-1988 .historical-year .pointer .hline,
+        #content #historical-1988 .historical-year .pointer .point {
+            background: #FFF;
+        }
+
+        #content #historical-1988 .historical-text {
+            color: #333;
+        }
+
+        #content #historical-1988.th {
+            margin-top: -90px;
+        }
+
+        #content #historical-1988.th .container {
+            padding-top: 0;
+        }
+
+        #content #historical-1989 {
+            max-width: 2000px;
+            margin: -220px auto 0;
+            padding-bottom: 0;
+            background: #ffc522 url("../images/bg-02.jpg") center no-repeat;
+        }
+
+        #content #historical-1989 .historical-year .year-ad {
+            color: #ffc522;
+        }
+
+        #content #historical-1989 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-1989 .historical-year .pointer .hline,
+        #content #historical-1989 .historical-year .pointer .point {
+            background: #ffc522;
+        }
+
+        #content #historical-1989.th {
+            margin-top: -150px;
+            padding-bottom: 50px;
+            background-position-y: bottom;
+        }
+
+        #content #historical-1996 {
+            margin-top: -118px;
+            background: #fff;
+        }
+
+        #content #historical-1996 .historical-year {
+            margin-top: -135px;
+        }
+
+        #content #historical-1996 .historical-year .year-ad {
+            color: #ffc522;
+        }
+
+        #content #historical-1996 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-1996 .historical-year .pointer .hline,
+        #content #historical-1996 .historical-year .pointer .point {
+            background: #ffc522;
+        }
+
+        #content #historical-1996.th {
+            margin-top: -12px;
+        }
+
+        #content #historical-2003 {
+            max-width: 2000px;
+            margin: -26px auto 0;
+            padding-bottom: 50px;
+            background: #ffc522 url("../images/bg-01.jpg") center top no-repeat;
+        }
+
+        #content #historical-2003 .historical-img {
+            margin-top: -240px;
+        }
+
+        #content #historical-2003 .historical-year .year-ad {
+            color: #FFF;
+        }
+
+        #content #historical-2003 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-2003 .historical-year .pointer .hline,
+        #content #historical-2003 .historical-year .pointer .point {
+            background: #FFF;
+        }
+
+        #content #historical-2003 .historical-text {
+            color: #333;
+        }
+
+        #content #historical-2003.th {
+            margin-top: 130px;
+        }
+
+        #content #historical-2008 {
+            max-width: 2000px;
+            margin: -145px auto 0;
+            background: #ffc522;
+        }
+
+        #content #historical-2008 .historical-img {
+            margin-top: -200px;
+        }
+
+        #content #historical-2008 .historical-year .year-ad {
+            color: #FFF;
+        }
+
+        #content #historical-2008 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-2008 .historical-year .pointer .hline,
+        #content #historical-2008 .historical-year .pointer .point {
+            background: #FFF;
+        }
+
+        #content #historical-2008 .historical-text {
+            color: #333;
+        }
+
+        #content #historical-2008.th {
+            margin-top: 0;
+        }
+
+        #content #historical-2011 {
+            margin-top: -140px;
+            background: url("../images/bg-02.jpg") center top no-repeat;
+        }
+
+        #content #historical-2011 .historical-img {
+            margin-top: -150px;
+        }
+
+        #content #historical-2011 .historical-img:after {
+            content: '';
+            top: -3380px;
+            height: 4020px;
+        }
+
+        #content #historical-2011 .historical-year .year-ad {
+            color: #ffc522;
+        }
+
+        #content #historical-2011 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-2011 .historical-year .pointer .hline,
+        #content #historical-2011 .historical-year .pointer .point {
+            background: #ffc522;
+        }
+
+        #content #historical-2011.th {
+            margin-top: -20px;
+        }
+
+        #content #historical-2018 {
+            margin-top: -290px;
+        }
+
+        #content #historical-2018 .historical-year .year-ad {
+            color: #ffc522;
+        }
+
+        #content #historical-2018 .historical-year .year-be {
+            color: #333;
+        }
+
+        #content #historical-2018.th {
+            margin-top: -200px;
+        }
+
+        #content .action {
+            margin-top: 20px;
+            padding-bottom: 14px;
+        }
+
+        #content.fixed {
+            position: relative;
+            margin-top: 0;
+            background: url("../images/bg-02.jpg") center top no-repeat;
+        }
+
+        #content.fixed:before {
+            content: '';
+            position: absolute;
+            top: -300px;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background: #ffc522;
+        }
+
+        @font-face {
+            font-family: "DB Heavent";
+            src: url("../fonts/DBHeavent.eot");
+            src: url("../fonts/DBHeavent.eot?#iefix") format("embedded-opentype"), url("../fonts/DBHeavent.woff2") format("woff2"), url("../fonts/DBHeavent.woff") format("woff"), url("../fonts/DBHeavent.ttf") format("truetype"), url("../fonts/DBHeavent.svg#DBHeavent") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @-webkit-keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fade-in-up {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 50%);
+                transform: translate(-50%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 50%);
+                transform: translate(-50%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @-webkit-keyframes fade-in-up-2 {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(0%, 50%);
+                transform: translate(0%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes fade-in-up-2 {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(0%, 50%);
+                transform: translate(0%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        #top-section {
+            max-width: 2000px;
+            margin: 0 auto;
+            /* background: #ffc522 url("../images/bg-02.jpg") center bottom no-repeat; */
+        }
+
+        #top-section .page-headline {
+            position: relative;
+            padding-bottom: 10px;
+            color: #333;
+            line-height: 1.2em;
+            letter-spacing: 2px;
+        }
+
+        #top-section .page-headline h1 {
+            font-size: 50px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        #top-section .page-headline .headline-primary {
+            font-weight: 700;
+        }
+
+        #top-section .page-headline .headline-secondary {
+            font-weight: 400;
+        }
+
+        #top-section .page-headline .hr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 120px;
+            height: 4px;
+            background: #333;
+        }
+
+        #top-section .back-btn {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        #top-section .back-btn a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: auto;
+            color: #FFF;
+        }
+
+        #top-section .back-btn img {
+            vertical-align: middle;
+            height: 14px;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+
+        #top-section .back-btn:hover img {
+            margin-right: 10px;
+        }
+
+        #know-more {
+            padding-top: 50px;
+            background: #f8f7f7;
+        }
+
+        #know-more .page-headline {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            color: #333;
+            line-height: 1.2em;
+            letter-spacing: 2px;
+            text-transform: uppercase
+        }
+
+        #know-more .page-headline h2 {
+            font-size: 50px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        #know-more .page-headline .headline-primary {
+            font-weight: 700;
+        }
+
+        #know-more .page-headline .headline-secondary {
+            font-weight: 400;
+        }
+
+        #know-more .page-headline .hr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 120px;
+            height: 4px;
+            background: #333;
+        }
+
+        #know-more .list .story-item {
+            display: block;
+            color: #333;
+        }
+
+        #know-more .list .story-item .story-img {
+            overflow: hidden;
+        }
+
+        #know-more .list .story-item .story-img img {
+            width: 100%;
+            -webkit-transition: 0.4s ease-in-out;
+            transition: 0.4s ease-in-out;
+        }
+
+        #know-more .list .story-item .story-info {
+            padding: 14px 20px;
+            background: #FFF;
+        }
+
+        #know-more .list .story-item .story-info .story-topic {
+            font-size: 20px;
+            text-transform: uppercase
+        }
+
+        #know-more .list .story-item .story-info .story-topic .strong {
+            font-weight: 700;
+            -webkit-transition: 0.4s ease-in-out;
+            transition: 0.4s ease-in-out;
+        }
+
+        #know-more .list .story-item .story-info .story-description {
+            margin-top: 10px;
+            min-height: 95px;
+            font-family: 'korolev', sans-serif;
+            font-size: 15px;
+            line-height: 1.6em;
+            color: #999;
+        }
+
+        #know-more .list .story-item .story-info .story-description.th {
+            font-family: "DB Heavent";
+            font-size: 20px;
+            line-height: 1.2em;
+        }
+
+        #know-more .list .story-item:hover .story-img img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        #know-more .list .story-item:hover .story-info .story-topic .strong {
+            color: #ffc522;
+        }
+
+        #know-more .action {
+            margin-top: 20px;
+            padding-bottom: 14px;
+        }
+
+        .modal {
+            background-color: #fff;
+        }
+
+        .modal-close {
+            cursor: pointer;
+            width: 21px;
+            position: absolute;
+            top: 30px;
+            right: 15px;
+            z-index: 1;
+        }
+
+        .modal-content {
+            border: none;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .modal .embed-responsive {
+            margin-top: 20px;
+        }
+
+        .modal-backdrop.show {
+            opacity: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="c-nav">
+        <div class="c-nav-body">
+            <a href="index.html" class="c-nav-brand"><img src="/assets/logo.png"></a>
+            <ul>
+                <li><a href="singha-story.html">SINGHA STORY</a></li>
+                <li><a href="our-beer.html">OUR BEER</a></li>
+                <li><a href="singha-reserve.html">SINGHA RESERVE</a></li>
+                <li><a href="events.html">UPCOMING EVENTS</a></li>
+                <li><a href="singha-experience.html">SINGHA EXPRERIENCE</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="top-section"  style="padding-top: 8rem">
+        <div class="container">
+            <div class="page-headline" data-aos="fade">
+                <h1>
+                    <div class="headline-primary">Historical</div>
+                    <div class="headline-secondary">Timeline</div>
+                </h1>
+                <div class="hr"></div>
+            </div>
+
+            <div class="navigation" data-aos="fade">
+                <div class="nav-block">
+
+                    <div class="nav-content">
+                        <div class="hline"></div>
+
+                        <div id="hop-1910" data-target="1910" class="nav-item active">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2453</div>
+                                <div class="year-ad">1910</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-1929" data-target="1929" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2472</div>
+                                <div class="year-ad">1929</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-1933" data-target="1933" class="nav-item highlight">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2476</div>
+                                <div class="year-ad">1933</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-1955" data-target="1955" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2498</div>
+                                <div class="year-ad">1955</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-1967" data-target="1967" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2510</div>
+                                <div class="year-ad">1967</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-1970" data-target="1970" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2513</div>
+                                <div class="year-ad">1970</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-1988" data-target="1988" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2531</div>
+                                <div class="year-ad">1988</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-1989" data-target="1989" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2532</div>
+                                <div class="year-ad">1989</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-1996" data-target="1996" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2539</div>
+                                <div class="year-ad">1996</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-2003" data-target="2003" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2546</div>
+                                <div class="year-ad">2003</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-2008" data-target="2008" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2551</div>
+                                <div class="year-ad">2008</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-2011" data-target="2011" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2554</div>
+                                <div class="year-ad">2011</div>
+                            </div>
+                        </div>
+
+                        <div id="hop-2018" data-target="2018" class="nav-item">
+                            <div class="hop"></div>
+                            <div class="year">
+                                <div class="year-be">2561</div>
+                                <div class="year-ad">2018</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="back-btn" data-aos="fade-left" data-aos-delay="300">
+                <a href="https://singha.com/singha-story">
+                    <img src="https://singha.com/images/icon-arrow-back.png"> &nbsp;BACK
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content" style="margin-top: -40rem;">
+        <div class="main-line" data-aos="fade" data-aos-delay="400" ></div>
+        <div class="sub-line d-none d-md-block en" data-aos="fade" data-aos-delay="500"></div>
+
+        <div id="historical-1910" class="historical-item item-left">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-1910.jpg"
+                                alt="Ferry Service on Chao Phraya River">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">1910</span><br>
+                                <span class="year-be">/ 2453 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            Boon Rawd founder Praya Bhirom Bhakdi started one of his earliest business ventures with a
+                            ferry
+                            service which offered transportation across the Chao Phraya River, linking Bangkok and
+                            Thonburi. He
+                            would run this business for nearly 20 years before the
+                            Thai government decided in 1929 to build a permanent bridge across the river. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-1929" class="historical-item item-right en">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-end">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-1929.jpg"
+                                alt="Singha Beer Founder Phraya Bhirom Bhakdi and Acquaintances">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">1929</span><br>
+                                <span class="year-be">/ 2472 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>Praya Bhirom Bhakdi, now in his late 50s, was first introduced to beer over a dinner
+                                arranged by
+                                a German acquaintance, <span class="inline-text">Emil Eisenhoffer</span>, to discuss
+                                business
+                                opportunities in Siam. At the pivotal
+                                dinner, Praya Bhirom Bhakdi immediately sensed the potential of beer as a beverage that
+                                Thai
+                                people would take to.</p>
+
+                            <p>At that time, Siam was losing out on foreign exchange from imported beer; over a
+                                four-year period
+                                it was estimated that the country had spent more than 1.7 million baht on foreign brews.
+                            </p>
+
+                            <p>Praya Bhirom Bhakdi committed to launching a home-brewed beer, and shortly afterwards he
+                                spent
+                                six months in Europe where he and his companions inspected numerous breweries and
+                                visited barley
+                                and hop farms to learn about the
+                                raw materials needed to brew beer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-1933" class="historical-item item-left">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-1933.png"
+                                alt="Phraya Bhirom Bhakdi Granted License to Brew Beer">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">1933</span><br>
+                                <span class="year-be">/ 2476 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>The Thai government officially granted Praya Bhirom Bhakdi a long-coveted license to brew
+                                beer
+                                and construction of a brewery began in May 1933 on a plot of land on Samsen Road, next
+                                to the
+                                river.</p>
+
+                            <p>Officially established on 4 August 1933, Boon Rawd Brewery was named after Praya Bhirom
+                                Bhakdi’s
+                                childhood nickname from his father, meaning ‘fortunate survivor’, following the boy’s
+                                lucky
+                                rescue after a fall into a canal.
+                            </p>
+
+                            <p class="highlight">Boon Rawd Brewery began producing beer in March the following year with
+                                the
+                                launch of three brands: Golden Kite, Singha, and Stupa, each of which sold for 32 satang
+                                a
+                                bottle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-1955" class="historical-item item-right en">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-end">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-1955.jpg"
+                                alt="Boon Rawd Brewery Brewing Vessels and Aluminium Storage Tanks">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">1955</span><br>
+                                <span class="year-be">/ 2498 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>Boon Rawd increased its capacity for the first time and went from bottling 6,000 litres
+                                an hour
+                                to 12,000 litres an hour. To accomplish this, the firm built two additional brewing
+                                vessels,
+                                added more aluminium storage tanks,
+                                and integrated new mechanic fillers.</p>
+
+                            <p>Praya Bhirom Bhakdi’s youngest son Chamnong returned from his studies in England to join
+                                the
+                                family firm and assumed responsibility for the company’s accounting and finances. With
+                                his
+                                conservative stewardship of the firm’s
+                                finances, Boon Rawd soon became a strong, stable, and cash-rich company.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-1967" class="historical-item item-left en">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-1967.png"
+                                alt="Boon Rawd Expanded With Singha as the Most Popular Beer">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">1967</span><br>
+                                <span class="year-be">/ 2510 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>Boon Rawd Brewery undertook major expansion. The company's ground was extended from 3.6
+                                acres to
+                                22.8 acres.</p>
+
+                            <p>Singha beer became the most popular beer and was therefore selected as the company's only
+                                brand.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-1970" class="historical-item item-right en">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-end">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-1970.jpg"
+                                alt="Boon Rawd Brewery Exporting Singha Beer Abroad">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">1970</span><br>
+                                <span class="year-be">/ 2513 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>With the addition of a new filling line, Boon Rawd Brewery was producing 30,000 bottles
+                                of beer
+                                per hour, more than a seven-fold increase on its original capacity of just 4,000 bottles
+                                of beer
+                                an hour.</p>
+
+                            <p>One year later, the company began exporting Singha beer aboard. Its first consignment to
+                                America
+                                consisted of 1,200 cases bound for Los Angeles.</p>
+
+                            <p>Throughout the 1970s, production grew with skyrocketing demand. In 1972 Boon Rawd sold
+                                30.8
+                                million litres of beer; in 1979, the company sold 145.7 million litres.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-1988" class="historical-item item-left en">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-1988.jpg"
+                                alt="Boon Rawd Automatic Filling Line and Production in Pathumthani">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">1988</span><br>
+                                <span class="year-be">/ 2531 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>A new automatic filling line became operational, replacing the mechanical one and
+                                doubling
+                                capacity to 60,000 bottles an hour.</p>
+
+                            <p>Boon Rawd opened its second beer production facility, <span
+                                    class="inline-text">Patumthani
+                                    Brewery.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-1989" class="historical-item item-right en">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-end">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-1989.jpg" alt="Vintage Singha Beer Can">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">1989</span><br>
+                                <span class="year-be">/ 2532 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>Boon Rawd began producing Singha beer in cans, then a novelty for Thailand.</p>
+
+                            <p>Singha Draft and Singha Gold Light were produced to target to those who prized fresh
+                                beer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-1996" class="historical-item item-left en">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-1996.png"
+                                alt="Boon Rawd’s Third Brewery in Khon Kaen">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">1996</span><br>
+                                <span class="year-be">/ 2539 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>Despite foreign competitors entering the market, Singha beer was still the undisputed
+                                leader in
+                                Thailand. Boon Rawd sold a record of 619.3 million litres that year, a 21.1 percent
+                                increase
+                                over the previous year.</p>
+
+                            <p>Boon Rawd invested in its third brewery in Khon Kaen, the heart of the Northeast and the
+                                gateway
+                                to Indochina. It opened as the largest and most technologically advanced facility in
+                                Thailand in
+                                the 1990s.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-2003" class="historical-item item-right en">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-end">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-2003.jpg"
+                                alt="70th Anniversary Special Singha Beer">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">2003</span><br>
+                                <span class="year-be">/ 2546 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>To celebrate its 70th year, the company released Singha 70, a special anniversary beer.
+                            </p>
+
+                            <p>Also to mark the milestone, a lavish celebration attended by 2,000 guests was held at
+                                Suan Amporn
+                                with entertainment from leading Thai singers and popstars. The gathering included top
+                                politicians from all sides with guests
+                                including royalty, business leaders, and members of Thailand’s glitterati.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-2008" class="historical-item item-left en">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-2008.jpg"
+                                alt="Boon Rawd Celebrates 75th Anniversary">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">2008</span><br>
+                                <span class="year-be">/ 2551 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>Boon Rawd celebrated its 75th anniversary and festivities spanned the globe. Parties and
+                                ceremonies were held in London,
+                                <span class="inline-text">San Francisco,</span> Los Angeles and Sydney. There was much
+                                to
+                                celebrate. With its combined portfolio of beers, Singha was once again number one in the
+                                Thai
+                                market.
+                            </p>
+
+                            <p>As part of the anniversary, Singha sponsored a four-continent tour by Thai rock-and-roll
+                                duo
+                                Asanee and Wasan Chotikul.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-2011" class="historical-item item-right en">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-end">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-2011.jpg"
+                                alt="Singha Beverage Facility in Nakhon Pathom">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">2011</span><br>
+                                <span class="year-be">/ 2554 B.E.</span>
+                            </h2>
+                            <div class="pointer">
+                                <div class="hline"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+
+                        <div class="historical-text en">
+                            <p>A new brewery called Singha Beverage opened in Nakhon Pathom, capable of turning out more
+                                than
+                                280 million liters of beer each year. The facility was also the most energy-efficient
+                                and
+                                environmental-friendly brewery ever constructed
+                                in Thailand.</p>
+
+                            <p>By 2014, production capacity at Singha Beverage was increased to one billion liters per
+                                year.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historical-2018" class="historical-item item-left en">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="historical-img">
+                            <img src="https://singha.com/images/historical-2018.jpg" alt="Singha 85th anniversary">
+                        </div>
+
+                        <div class="historical-year">
+                            <h2>
+                                <span class="year-ad">2018</span><br>
+                                <span class="year-be">/ 2561 B.E.</span>
+                            </h2>
+                        </div>
+
+                        <div class="historical-text mb-0 en">
+                            Boon Rawd, now managed by the third and fourth generation of its founding family, celebrates
+                            its
+                            85th anniversary. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="know-more">
+        <div class="container">
+            <div class="page-headline" data-aos="fade-up">
+                <h2>
+                    <span class="headline-primary">Know More About</span><br>
+                    <span class="headline-secondary">SINGHA Story</span>
+                </h2>
+                <div class="hr"></div>
+            </div>
+
+            <div class="row list">
+                <div class="col-12 col-md-4">
+                    <a href="https://singha.com/singha-story/historical-timeline" class="story-item" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="story-img">
+                            <img src="https://singha.com/images/story-07.jpg" alt="History of Thailand’s First Brewery">
+                        </div>
+
+                        <div class="story-info">
+                            <h3 class="story-topic">
+                                <span class="strong">Historical</span> Timeline
+                            </h3>
+
+                            <div class="story-description">
+                                Read through our historical timeline, from how we became Thailand’s first brewery up to
+                                our
+                                latest milestones. </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="https://singha.com/singha-story/thai-brew" class="story-item" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <div class="story-img">
+                            <img src="https://singha.com/images/story-08.jpg" alt="Premium Thai Beer">
+                        </div>
+
+                        <div class="story-info">
+                            <h3 class="story-topic">
+                                <span class="strong">Our</span> Brew
+                            </h3>
+
+                            <div class="story-description">
+                                Our signature taste comes from premium ingredient selection and world-standard brewing
+                                process. </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <a href="https://singha.com/singha-story/download-resources" class="story-item" data-aos="fade-up"
+                        data-aos-delay="600">
+                        <div class="story-img">
+                            <img src="https://singha.com/images/story-10.jpg"
+                                alt="Singha Bottle Can and Logo File Download">
+                        </div>
+
+                        <div class="story-info">
+                            <h3 class="story-topic">
+                                <span class="strong">Download</span> Resources
+                            </h3>
+
+                            <div class="story-description">
+                                Resource for legally download of logo and pictures. </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="c-footer">
+        <div>
+            <img src="/assets/back-to-top-btn.png" class="back-to-top" onclick="fbacktotop()">
+            <script>
+                var backtotop = document.getElementsByClassName('back-to-top');
+                function fbacktotop() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            </script>
+        </div>
+        <div>
+            <ul>
+                <li><a href="http://www.boonrawd.co.th/">BOONRAWD.CO.TH</a></li>
+                <li><a href="http://www.singhaonlineshop.com/">SINGHA ONLINE SHOP</a></li>
+                <li><a href="http://www.facebook.com/Singha"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="http://www.youtube.com/user/SinghaDiscovers"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="http://www.instagram.com/singhabeer"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="c-footer-body">
+            <div>
+                <h1><a href="index.html">HOME</a></h1>
+            </div>
+            <div>
+                <h1><a href="singha-story.html">SINGHA STORY</a></h1>
+                <ul>
+                    <li><a href="about-singha.html">ABOUT SINGHA</a></li>
+                    <li><a href="">HISTORICAL TIMELINE</a></li>
+                    <li><a href="thai-brew.html">OUR BREW</a></li>
+                    <li><a href="download-resources.html">DOWNLOAD RESOURCES</a></li>
+                    <li><a href="archives.html">ARCHIVE</a></li>
+                    <li><a href="awards.html">SINGHA AWARDS</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1><a href="our-beer.html">OUR BEER</a></h1>
+                <ul>
+                    <li><a href="our-beer.html">CAN (320 ml.)</a></li>
+                    <li><a href="our-beer.html">BOTTLE (320 ml.)</a></li>
+                    <li><a href="our-beer.html">BOTTLE (620 ml.)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1><a href="events.html">UPCOMING EVENTS</a></h1>
+            </div>
+            <div>
+                <h1><a href="singha-experience.html">SINGHA EXPRERIENCE</a></h1>
+            </div>
+            <div>
+                <h1><a href="contact.html">CONTACT US</a></h1>
+            </div>
+        </div>
+        <div>
+            <a href="https://www.singha.com/policy">TERMS & CONDITIONS</a>
+            <p class="mb-0">© COPYRIGHTS 2018 SINGHA CORPORATION CO., LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    $(function () {
+            AOS.init({
+                once: true
+            });
+        });
+        $(function () {
+
+                $(window).scroll(function () {
+                    var wS = $(this).scrollTop();
+                    var wH = $(window).height();
+
+                    if (wS > $('#historical-2018').offset().top - (wH / 2)) {
+                        if (!$('#hop-2018').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-2018').addClass('active');
+                        }
+                    } else if (wS > $('#historical-2011').offset().top - (wH / 2)) {
+                        if (!$('#hop-2011').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-2011').addClass('active');
+                        }
+                    } else if (wS > $('#historical-2008').offset().top - (wH / 2)) {
+                        if (!$('#hop-2008').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-2008').addClass('active');
+                        }
+                    } else if (wS > $('#historical-2003').offset().top - (wH / 2)) {
+                        if (!$('#hop-2003').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-2003').addClass('active');
+                        }
+                    } else if (wS > $('#historical-1996').offset().top - (wH / 2)) {
+                        if (!$('#hop-1996').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-1996').addClass('active');
+                        }
+                    } else if (wS > $('#historical-1989').offset().top - (wH / 2)) {
+                        if (!$('#hop-1989').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-1989').addClass('active');
+                        }
+                    } else if (wS > $('#historical-1988').offset().top - (wH / 2)) {
+                        if (!$('#hop-1988').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-1988').addClass('active');
+                        }
+                    } else if (wS > $('#historical-1970').offset().top - (wH / 2)) {
+                        if (!$('#hop-1970').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-1970').addClass('active');
+                        }
+                    } else if (wS > $('#historical-1967').offset().top - (wH / 2)) {
+                        if (!$('#hop-1967').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-1967').addClass('active');
+                        }
+                    } else if (wS > $('#historical-1955').offset().top - (wH / 2)) {
+                        if (!$('#hop-1955').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-1955').addClass('active');
+                        }
+                    } else if (wS > $('#historical-1933').offset().top - (wH / 2)) {
+                        if (!$('#hop-1933').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-1933').addClass('active');
+                        }
+                    } else if (wS > $('#historical-1929').offset().top - (wH / 2)) {
+                        if (!$('#hop-1929').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-1929').addClass('active');
+                        }
+                    } else if (wS > $('#historical-1910').offset().top - (wH / 2)) {
+                        if (!$('#hop-1910').hasClass('active')) {
+                            $('.nav-item.active').removeClass('active');
+                            $('#hop-1910').addClass('active');
+                        }
+                    }
+                });
+
+                $('.navigation').on('click', '.nav-item', function () {
+                    var wH = $(window).height();
+                    var target = '#historical-' + $(this).data('target');
+
+                    $("html, body").animate({
+                        scrollTop: $(target).offset().top - (wH / 3)
+                    });
+                });
+
+            });
+</script>
+</html>
