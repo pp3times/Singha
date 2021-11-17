@@ -51,7 +51,7 @@
     max-width: 2000px;
     margin: 0 auto;
     padding: 40px 0 600px;
-    background: #ffc522 url(/pleng/bg-02.jpg) center bottom no-repeat;
+    background: #ffc522 url('http://10.0.15.20/project/g42singha/pleng/bg-02.jpg') center bottom no-repeat;
 }
 
 #container {
