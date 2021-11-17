@@ -28,6 +28,9 @@
     --white: #ffffff;
     --gray: #eaeae9;
 }
+body{
+    overflow-x: hidden;
+}
 .c-nav {
     position: fixed;
     height: 6rem;
