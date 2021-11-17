@@ -1,0 +1,169 @@
+:root {
+    --yellow: #ffc107;
+    --white: #ffffff;
+    --gray: #eaeae9;
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+* {
+    font-family: sans-serif;
+}
+body {
+    background-color: var(--yellow);
+}
+.c-nav {
+    position: fixed;
+    height: 6rem;
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+}
+.c-nav > .c-nav-body {
+    padding: 0 25rem;
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--yellow);
+}
+.c-nav-body > ul {
+    display: inline-flex;
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    top: .5rem;
+}
+.c-nav-body > ul > li {
+    color: var(--white);
+    font-weight: bold;
+    padding: 0 1rem;
+    font-size: .75rem;
+
+}
+.c-nav-body > .c-nav-brand {
+    background-color: var(--white);
+    padding: .5rem;
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.c-nav-brand > img {
+    height: 4.5rem;
+}
+
+.c-footer {
+    background-color: var(--white);
+}
+.c-footer > div:nth-child(2) {
+    background-color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.c-footer > div:nth-child(3) {
+    background-color: var(--gray);
+}
+.c-footer > div:nth-child(2) {
+    background-color: var(--yellow);
+}
+.c-footer > div:nth-child(1) {
+    text-align: center;
+    height: 3rem;
+}
+.c-footer > div:nth-child(1) > img {
+    height: 2.25rem;
+}
+.c-footer > div:nth-child(2) > ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    top: .5rem;
+}
+.c-footer > div:nth-child(2) > ul > li {
+    color: var(--white);
+    padding: 0 1rem;
+    font-weight: bold;
+    font-size: .75rem;
+}
+.c-footer > div:nth-child(2) > ul > li > a {
+    color: var(--white);
+}
+.c-footer > div:nth-child(2) > ul > li:not(:last-child) {
+    border-right: 1px solid var(--white);
+}
+.c-footer > div:nth-child(3) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 1rem 25rem;
+}
+.c-footer > div:nth-child(3) > div > h1 > a {
+    font-size: .80rem;
+    font-weight: bold;
+    color: #999;
+    border-bottom: 2px solid #999;
+    text-decoration: none;
+}
+.c-footer {
+    font-size: .80rem;
+}
+.c-footer a {
+    text-decoration: none;
+    color: #999;
+}
+.c-footer ul {
+    list-style: none;
+    padding: 0;
+}
+.c-footer ul > li {
+    padding-top: .25rem;
+}
+.c-footer > div:nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 25rem;
+    background-color: var(--yellow);
+    color: var(--white);
+    font-size: .7rem;
+}
+.c-footer > div:nth-child(4) a {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.content {
+    padding-top: 6rem;
+}
+.headtopbox{
+    max-width: 70%;
+}
+
+.middletopbox{
+    font-size: 0.8rem;
+    border-left: 1px solid black; 
+    border-bottom: 1px solid black; 
+    border-right: 1px solid black; 
+    padding-left: 8rem; 
+    padding-right: 8rem;
+}
+
+.country {
+    background-image: url(jean/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 0% 30%;
+}
+
+h4 {
+    /* margin-left: .4rem; */
+    padding-left: .6rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.txtnav :hover {
+    color: black;
+}
