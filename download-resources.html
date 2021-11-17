@@ -209,16 +209,22 @@
     </div>
 
     <footer class="c-footer">
-        <div data-aos="fade-up" data-aos-delay="200">
-            <a href="#top"><img src="assets/back-to-top-btn.png"></a>
+        <div>
+            <img src="/assets/back-to-top-btn.png" class="back-to-top" onclick="fbacktotop()">
+            <script>
+                var backtotop = document.getElementsByClassName('back-to-top');
+                function fbacktotop() {
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                }
+            </script>
         </div>
         <div>
             <ul>
-                <li><a href="">BOONRAWD.CO.TH</a></li>
-                <li><a href="">SINGHA ONLINE SHOP</a></li>
-                <li><a href="">FB</a></li>
-                <li><a href="">YT</a></li>
-                <li><a href="">IG</a></li>
+                <li><a href="http://www.boonrawd.co.th/">BOONRAWD.CO.TH</a></li>
+                <li><a href="http://www.singhaonlineshop.com/">SINGHA ONLINE SHOP</a></li>
+                <li><a href="http://www.facebook.com/Singha"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="http://www.youtube.com/user/SinghaDiscovers"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="http://www.instagram.com/singhabeer"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
         <div class="c-footer-body">
@@ -229,19 +235,19 @@
                 <h1><a href="singha-story.html">SINGHA STORY</a></h1>
                 <ul>
                     <li><a href="about-singha.html">ABOUT SINGHA</a></li>
-                    <li><a href="historical-timeline.html">HISTORICAL TIMELINE</a></li>
+                    <li><a href="">HISTORICAL TIMELINE</a></li>
                     <li><a href="thai-brew.html">OUR BREW</a></li>
                     <li><a href="download-resources.html">DOWNLOAD RESOURCES</a></li>
-                    <li><a href="">ARCHIVE</a></li>
-                    <li><a href="singha-awards.html">SINGHA AWARDS</a></li>
+                    <li><a href="archives.html">ARCHIVE</a></li>
+                    <li><a href="awards.html">SINGHA AWARDS</a></li>
                 </ul>
             </div>
             <div>
                 <h1><a href="our-beer.html">OUR BEER</a></h1>
                 <ul>
-                    <li><a href="">CAN (320 ml.)</a></li>
-                    <li><a href="">BOTTLE (320 ml.)</a></li>
-                    <li><a href="">BOTTLE (620 ml.)</a></li>
+                    <li><a href="our-beer.html">CAN (320 ml.)</a></li>
+                    <li><a href="our-beer.html">BOTTLE (320 ml.)</a></li>
+                    <li><a href="our-beer.html">BOTTLE (620 ml.)</a></li>
                 </ul>
             </div>
             <div>
@@ -255,7 +261,7 @@
             </div>
         </div>
         <div>
-            <a href="">TERMS & CONDITIONS</a>
+            <a href="https://www.singha.com/policy">TERMS & CONDITIONS</a>
             <p class="mb-0">© COPYRIGHTS 2018 SINGHA CORPORATION CO., LTD. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
