@@ -213,22 +213,22 @@
 
     <script>
         var card = [
-            [1, `SINGHA MUSIC`, `SINGHA KOLOUR IN THE PARK 2020`, `'Kolour in the Park 2020': An unforgettable Music and Art Festival.`],
-            [2, `SINGHA FOOD`, `SINGHA COOKING AT HOME 2020`, `The weekend is just around the corner, why not invite some friends over to cook up a simple party menu?`],
-            [3, `SINGHA MUSIC`, `A DAY WITH OLYMPIC DIGGER`, `We spent a day with Olympic Digger to dive into the world of vinyl records and analog music. Discover how this music store first opened and meet the p...`],
-            [4, `SINGHA FOOD`, `BEER RECIPE`, `There’s more than one way to enjoy Singha beer. Find out how to use it in meals with these five delicious recipes.`],
-            [5, `SINGHA ENTREPRENEUR`, `FIRST BUSINESS TRIP ABROAD`, `Going on a business trip abroad? Here’s everything you need to know, bring, and prepare for.`],
-            [6, `SINGHA FOOD`, `THAI FOOD THAT TASTE UNEXPECTEDLY GOOD WITH BEER`, `Aside from the usual deep fried appetizers, it’s not surprise that the original Thai beer also complements Thai dishes. Here’s a list of Thai food tha...`],
-            [7, `SINGHA MUSIC`, `FIVE PEOPLE YOU ARE LIKELY TO MEET AT A CONCERT`, `Going to a concert? Here are five kinds of people you are guaranteed to meet.`],
-            [8, `SINGHA ENTREPRENEUR`, `HOW TO BUILD A DREAM TEAM`, `What makes a successful team? Here’s six tips to help you succeed at any team project.`],
-            [9, `SINGHA TRAVEL`, `ALONG THE CHAO PHRAYA RIVER`, `What makes a successful team? Here’s six tips to help you succeed at any team project.`]
+            [1, `SINGHA MUSIC`, `SINGHA KOLOUR IN THE PARK 2020`, `'Kolour in the Park 2020': An unforgettable Music and Art Festival.`, `singha-kolour-in-the-park-2020.html`],
+            [2, `SINGHA FOOD`, `SINGHA COOKING AT HOME 2020`, `The weekend is just around the corner, why not invite some friends over to cook up a simple party menu?`, `singha-cooking-at-home-bbq-recipe.html`],
+            [3, `SINGHA MUSIC`, `A DAY WITH OLYMPIC DIGGER`, `We spent a day with Olympic Digger to dive into the world of vinyl records and analog music. Discover how this music store first opened and meet the p...`, `a-day-with-olympic-digger.html`],
+            [4, `SINGHA FOOD`, `BEER RECIPE`, `There’s more than one way to enjoy Singha beer. Find out how to use it in meals with these five delicious recipes.`, `beer-recipes.html`],
+            [5, `SINGHA ENTREPRENEUR`, `FIRST BUSINESS TRIP ABROAD`, `Going on a business trip abroad? Here’s everything you need to know, bring, and prepare for.`, `first-business-trip-abroad.html`],
+            [6, `SINGHA FOOD`, `THAI FOOD THAT TASTE UNEXPECTEDLY GOOD WITH BEER`, `Aside from the usual deep fried appetizers, it’s not surprise that the original Thai beer also complements Thai dishes. Here’s a list of Thai food tha...`, `thai-food-with-singha.html`],
+            [7, `SINGHA MUSIC`, `FIVE PEOPLE YOU ARE LIKELY TO MEET AT A CONCERT`, `Going to a concert? Here are five kinds of people you are guaranteed to meet.`, `five-people-you-will-meet-at-any-concert.html`],
+            [8, `SINGHA ENTREPRENEUR`, `HOW TO BUILD A DREAM TEAM`, `What makes a successful team? Here’s six tips to help you succeed at any team project.`, `how-to-build-the-dream-team.html`],
+            [9, `SINGHA TRAVEL`, `ALONG THE CHAO PHRAYA RIVER`, `What makes a successful team? Here’s six tips to help you succeed at any team project.`, `along-chao-phraya.html`]
         ];
 
         function order(type) {
             document.getElementsByClassName('experience-card-group')[0].innerHTML = ``;
             var alrady = [];
             for (let index = 0; index < 3; index++) {
-                while (true) {
+                while(true) {
                     var rand = Math.floor(Math.random() * 10);
                     if (!alrady.includes(rand) && rand < 9) {
                         alrady.push(rand);
@@ -239,17 +239,17 @@
                 console.log(rand, alrady);
 
                 var html = `
-                        <div class="experience-card" style="background-color: #ffffff; text-align:center;">
-                            <a href="" class="experience-card-img">
-                                <img src="assets/card-`+ card[rand][0] + `.jpg" alt="">
+                        <div class="experience-card">
+                            <a href="`+card[rand][4]+`" class="experience-card-img">
+                                <img src="/assets/card-`+card[rand][0]+`.jpg" alt="">
                             </a>
                             <div class="experience-card-header">
-                                <h1>`+ card[rand][2] + `</h1>
+                                <h1>`+card[rand][2]+`</h1>
                             </div>
                             <div class="experience-card-body">
-                                <h1>`+ card[rand][1] + `</h1>
-                                <p>`+ card[rand][3] + `</p>
-                                <a class="btn btn-outline-secondary btn-sm px-4 rounded-1">- MORE DETAIL -</a>
+                                <h1>`+card[rand][1]+`</h1>
+                                <p>`+card[rand][3]+`</p>
+                                <a href="`+card[rand][4]+`" class="btn btn-outline-secondary btn-sm px-4 rounded-1">- MORE DETAIL -</a>
                             </div>
                         </div>`;
                 document.getElementsByClassName('experience-card-group')[0].innerHTML += html;
@@ -257,8 +257,6 @@
         };
 
         order('all');
-
-        AOS.init();
     </script>
 </body>
 
