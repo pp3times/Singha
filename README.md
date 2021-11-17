@@ -11,9 +11,9 @@
 - [x] Check Legal ([Jrm])
 - [ ] Index ([Fang])
 	- [ ] Event ([Fang]) **
-	- [ ] SINGHA MUSIC ([Jean])
-	- [ ] SINGHA FOOD ([Jean])
-	- [ ] SINGHA MUSIC ([Jean])
+	- [x] SINGHA MUSIC ([Jean])
+	- [x] SINGHA FOOD ([Jean])
+	- [x] SINGHA MUSIC ([Jean])
 - [x] singha-story ([Jrm])
 	- [x] ABOUT SINGHA ([Jrm])
 	- [ ] HISTORICAL TIMELINE ([Jrm])
